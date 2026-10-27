@@ -72,6 +72,12 @@ $system = <<<'PROMPT'
 {{SYSTEM_PROMPT}}
 PROMPT;
 
+// Ziyaretçinin bulunduğu sayfanın dili; ziyaretçinin yazdığı dil anlaşılmazsa yanıt bu dilde verilir
+const LANG_NAMES = {{LANG_NAMES}};
+$lang = $in['lang'] ?? 'tr';
+if (!is_string($lang) || !isset(LANG_NAMES[$lang])) $lang = 'tr';
+$system .= "\n\nZiyaretçinin bulunduğu sayfanın dili: " . LANG_NAMES[$lang] . " ($lang).";
+
 $body = [
     'model' => MODEL,
     'max_tokens' => 2048,

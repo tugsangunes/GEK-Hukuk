@@ -1,0 +1,69 @@
+<!-- title: Contact -->
+<!-- description: Address, phone, e-mail and office hours of GEK Hukuk Law Office in Adana, Türkiye. -->
+<div class="page-head"><div class="wrap"><p class="eyebrow">Contact</p><h1>Get in touch</h1></div></div>
+<div class="wrap contact page-body">
+  <dl class="contact-list">
+    <div><dt>Address</dt><dd>{{ADDRESS}}<br><a href="{{MAP}}" rel="noopener" target="_blank">Show on map</a></dd></div>
+    <div><dt>Phone</dt><dd>{{PHONE}}</dd></div>
+    <div><dt>WhatsApp</dt><dd>{{WHATSAPP}}</dd></div>
+    <div><dt>E-mail</dt><dd>{{EMAIL}}</dd></div>
+    <div><dt>Office hours</dt><dd>{{HOURS}}</dd></div>
+    <div><dt>Languages</dt><dd>Meetings and correspondence in Turkish or English</dd></div>
+  </dl>
+  <form id="contact-form" novalidate>
+    <label for="f-name">Full name<input id="f-name" name="name" autocomplete="name" required></label>
+    <label for="f-mail">E-mail<input id="f-mail" name="email" type="email" autocomplete="email" required></label>
+    <label for="f-msg">Your message<textarea id="f-msg" name="message" required></textarea></label>
+    <p class="form-note">Please do not share the details of your legal dispute or any sensitive personal data through this form.</p>
+    <label class="check" for="f-kvkk"><input id="f-kvkk" type="checkbox" required> <span>I have read the <a href="kvkk.html">Privacy Notice</a>.</span></label>
+    <button class="btn" type="submit">Send</button>
+    <p class="form-note" id="form-status" role="status">When you press Send, your message opens in your e-mail application.</p>
+  </form>
+</div>
+
+<section class="map-block" aria-label="Map">
+  <div class="wrap">
+    <div class="map" id="harita" data-src="{{MAP_EMBED}}">
+      <div class="map-placeholder">
+        <svg class="map-pin" viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <p class="map-address">{{ADDRESS}}</p>
+        <div class="actions">
+          <button class="btn" type="button" id="map-load">Show map</button>
+          <a class="btn btn-ghost" href="{{MAP}}" rel="noopener" target="_blank">Open in Google Maps</a>
+        </div>
+        <p class="form-note">The map is loaded from Google Maps. When you press "Show map", Google may place cookies in your browser. See our <a href="cerez.html">Cookie Policy</a> for details.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block faq-block">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">Frequently asked questions</p>
+      <h2>Before your first meeting</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>How can I make an appointment?</summary>
+        <p>You can make an appointment by calling our office on weekdays between 09:00 and 17:00 (Türkiye time) or by writing to us using the form on this page.</p>
+      </details>
+      <details>
+        <summary>What should I bring to the first meeting?</summary>
+        <p>Bringing the contracts, title deeds, notifications, correspondence and documents from courts or enforcement offices relating to your matter helps us assess the situation more quickly. In addition to your documents, a short timeline of events is also useful.</p>
+      </details>
+      <details>
+        <summary>Will the information I share be kept confidential?</summary>
+        <p>Yes. Under the Turkish Attorneys' Act, lawyers are obliged to keep confidential the information they learn in the course of their professional activities. Your personal data are processed as described in our <a href="kvkk.html">Privacy Notice</a>.</p>
+      </details>
+      <details>
+        <summary>How are attorney's fees determined?</summary>
+        <p>Fees are agreed with the client according to the nature and scope of the work and set out in a written agreement. Fees may not be lower than the Minimum Attorney Fee Tariff published by the Union of Turkish Bar Associations.</p>
+      </details>
+      <details>
+        <summary>In which languages do you work?</summary>
+        <p>We conduct meetings, correspondence and contract work in Turkish and English. Our website is also available in other languages for information purposes only.</p>
+      </details>
+    </div>
+  </div>
+</section>
