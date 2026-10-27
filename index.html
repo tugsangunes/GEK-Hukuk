@@ -4,275 +4,204 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GEK Hukuk Bürosu</title>
-<meta name="description" content="GEK Hukuk Bürosu: çalışma alanları, avukatlar ve iletişim bilgileri.">
+<meta name="description" content="GEK Hukuk Bürosu, 2014&#x27;ten bu yana Adana&#x27;da şirketler, ticaret, gayrimenkul, iş, aile ve miras hukuku alanlarında hukuki danışmanlık ve dava takibi hizmeti vermektedir.">
 <link rel="icon" href="favicon.ico" sizes="48x48">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="theme-color" content="#0f2340">
 <link rel="stylesheet" href="fonts.css">
-<style>
-/* Layout: narrow reading column, left-aligned sections separated by hairlines; navy ground with light text and emerald accents (inverted logo) */
-:root {
-  --bg: #0f2340;
-  --surface: #13294a;
-  --ink: #f1f6f3;
-  --muted: #b3c1d1;
-  --line: #24406a;
-  --accent: #5fd6a0;
-  --brand-green: #5fd6a0;
-  --accent-soft: #173d45;
-  --btn-bg: #5fd6a0;
-  --btn-fg: #0f2340;
-  --ph: #f0c45a;
-  --ph-bg: #2c2412;
-  --font-display: "League Spartan", "Segoe UI", system-ui, sans-serif;
-  --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
-  --max: 68rem;
-  color-scheme: dark;
-}
-* { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
-body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 1.0625rem; line-height: 1.65; }
-.wrap { max-width: var(--max); margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
-a { color: var(--accent); }
-a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.15; letter-spacing: -.01em; text-wrap: balance; margin: 0; }
-.eyebrow { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
-.ph { background: var(--ph-bg); color: var(--ph); border-bottom: 1px dashed var(--ph); padding: 0 .2em; border-radius: 2px; }
-
-/* Header */
-body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--surface); }
-header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--surface); border-bottom: 1px solid var(--line); }
-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: .9rem; flex-wrap: wrap; }
-.brand { display: block; line-height: 0; }
-.brand img { height: 2.9rem; width: auto; max-width: 100%; margin-inline: -.6rem; }
-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 1.25rem; flex-wrap: wrap; }
-nav a { color: var(--ink); text-decoration: none; font-size: .95rem; }
-nav a:hover { color: var(--accent); }
-
-/* Hero */
-.hero { padding-block: 4.5rem 3.5rem; border-bottom: 1px solid var(--line); }
-.hero h1 { font-size: clamp(2.1rem, 5vw, 3.4rem); max-width: 18ch; margin-top: .75rem; }
-.hero p { max-width: 60ch; color: var(--muted); font-size: 1.15rem; margin: 1.25rem 0 0; }
-.hero .facts { display: flex; flex-wrap: wrap; gap: .5rem 2rem; margin-top: 2rem; font-size: .95rem; }
-.hero .facts div { display: flex; flex-direction: column; }
-.hero .facts dt { font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
-.hero .facts dd { margin: 0; }
-
-section { padding-block: 3.5rem; border-bottom: 1px solid var(--line); }
-.sec-head { display: grid; grid-template-columns: minmax(0, 14rem) minmax(0, 1fr); gap: 2rem; }
-.sec-head h2 { font-size: 1.75rem; }
-.sec-head h2::before { content: ""; display: block; width: 2rem; height: 3px; background: var(--brand-green); margin-bottom: .75rem; }
-.sec-body { min-width: 0; }
-.sec-body > p { max-width: 62ch; margin-top: 0; }
-
-/* Practice areas */
-.areas { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); border-top: 1px solid var(--line); }
-.areas li { padding: 1.25rem 1.25rem 1.25rem 0; border-bottom: 1px solid var(--line); }
-.areas h3 { font-size: 1.15rem; }
-.areas p { margin: .35rem 0 0; color: var(--muted); font-size: .97rem; }
-
-/* Lawyers */
-.people { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 1.5rem; }
-.person { background: var(--surface); border: 1px solid var(--line); padding: 1.5rem; display: flex; flex-direction: column; gap: .5rem; }
-.mono { width: 3.25rem; height: 3.25rem; display: grid; place-items: center; background: var(--accent-soft); color: var(--ink); font-family: var(--font-display); font-size: 1.4rem; font-weight: 600; padding-top: .15em; }
-.person h3 { font-size: 1.2rem; margin-top: .5rem; }
-.person dl { margin: .25rem 0 0; font-size: .92rem; display: grid; grid-template-columns: auto 1fr; gap: .15rem .75rem; }
-.person dt { color: var(--muted); }
-.person dd { margin: 0; }
-
-/* Publications */
-.pubs { list-style: none; margin: 0; padding: 0; }
-.pubs li { display: grid; grid-template-columns: 7rem minmax(0, 1fr); gap: 1rem; padding-block: 1rem; border-bottom: 1px solid var(--line); }
-.pubs time { color: var(--muted); font-size: .9rem; font-variant-numeric: tabular-nums; }
-.pubs h3 { font-size: 1.1rem; }
-.pubs p { margin: .25rem 0 0; color: var(--muted); font-size: .95rem; }
-.pubs-soon { color: var(--muted); margin: 0; }
-
-/* Contact */
-.contact { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 2.5rem; }
-.contact dl { margin: 0; display: grid; gap: 1rem; }
-.contact dt { font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
-.contact dd { margin: 0; }
-form { display: grid; gap: .9rem; background: var(--surface); border: 1px solid var(--line); padding: 1.5rem; }
-label { font-size: .9rem; font-weight: 600; display: grid; gap: .3rem; }
-input, textarea { font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); padding: .6rem .7rem; width: 100%; }
-textarea { min-height: 7rem; resize: vertical; }
-.check { display: flex; gap: .6rem; align-items: flex-start; font-weight: 400; font-size: .88rem; color: var(--muted); }
-.check input { width: auto; margin-top: .3rem; }
-button { font: inherit; font-weight: 600; background: var(--btn-bg); color: var(--btn-fg); border: 0; padding: .7rem 1.3rem; cursor: pointer; justify-self: start; }
-.form-note { font-size: .85rem; color: var(--muted); margin: 0; }
-
-footer { padding-block: 2.5rem 3rem; font-size: .88rem; color: var(--muted); }
-footer .wrap { display: grid; gap: 1rem; }
-footer .legal { max-width: 75ch; }
-footer .links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
-
-@media (max-width: 720px) {
-  .sec-head, .contact { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
-  .hero { padding-block: 3rem 2.5rem; }
-  .pubs li { grid-template-columns: minmax(0, 1fr); gap: .25rem; }
-  nav ul { gap: .9rem; }
-  .brand img { height: 2.5rem; }
-}
-@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
-</style>
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LegalService", "name": "GEK Hukuk Bürosu", "url": "https://gekhukuk.com/", "logo": "https://gekhukuk.com/assets/ikon-512.png", "telephone": "+90 532 292 10 72", "email": "info@gekhukuk.com", "foundingDate": "2014", "address": {"@type": "PostalAddress", "streetAddress": "Reşatbey Mah. 62006 Sk. No:5 Arun Apt. K:5 D:14", "addressLocality": "Seyhan", "addressRegion": "Adana", "addressCountry": "TR"}, "openingHours": "Mo-Fr 09:00-17:00", "availableLanguage": ["tr", "en"], "employee": [{"@type": "Person", "name": "Tuğsan Güneş", "jobTitle": "Avukat"}, {"@type": "Person", "name": "Ömer Murat Erdil", "jobTitle": "Avukat"}, {"@type": "Person", "name": "Adem Karakaya", "jobTitle": "Avukat"}]}</script>
 </head>
 <body>
-<header>
+<a class="skip" href="#icerik">İçeriğe geç</a>
+<header class="site-header">
   <div class="wrap">
-    <a class="brand" href="#top"><img src="assets/gek-logo-ters.svg" alt="GEK Hukuk Bürosu" width="363" height="77"></a>
-    <nav aria-label="Ana menü">
+    <a class="brand" href="index.html"><img src="assets/gek-logo-ters.svg" alt="GEK Hukuk Bürosu" width="363" height="77"></a>
+    <a class="header-cta" href="tel:+905322921072">+90 532 292 10 72</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="ana-menu">Menü</button>
+    <nav id="ana-menu" aria-label="Ana menü">
       <ul>
-        <li><a href="#hakkimizda">Hakkımızda</a></li>
-        <li><a href="#calisma-alanlari">Çalışma Alanları</a></li>
-        <li><a href="#avukatlar">Avukatlar</a></li>
-        <li><a href="#yayinlar">Yayınlar</a></li>
-        <li><a href="#iletisim">İletişim</a></li>
+        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+        <li><a href="calisma-alanlari.html">Çalışma Alanları</a></li>
+        <li><a href="avukatlar.html">Avukatlarımız</a></li>
+        <li><a href="yayinlar.html">Yayınlar</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
       </ul>
     </nav>
   </div>
 </header>
+<main id="icerik">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+    <p class="eyebrow">Avukatlık Bürosu · Adana</p>
+    <h1>Şirketlere ve kişilere hukuki danışmanlık ve dava takibi</h1>
+    <p class="lead">GEK Hukuk Bürosu, Av. Tuğsan Güneş, Av. Ömer Murat Erdil ve Av. Adem Karakaya'nın birlikte çalıştığı, Adana merkezli bir avukatlık bürosudur.</p>
+    <div class="actions">
+      <a class="btn" href="calisma-alanlari.html">Çalışma alanları</a>
+      <a class="btn btn-ghost" href="iletisim.html">İletişim bilgileri</a>
+    </div>
+    </div>
+    <figure class="hero-art"><img src="assets/adana.svg" alt="" width="600" height="420"></figure>
+  </div>
+</section>
 
-<main id="top">
-  <div class="hero">
-    <div class="wrap">
-      <div class="eyebrow">Avukatlık Bürosu · Adana</div>
-      <h1>GEK Hukuk Bürosu</h1>
-      <p>Güneş, Erdil ve Karakaya Hukuk Bürosu; şirketler, ticaret, gayrimenkul, iş ve aile hukuku başta olmak üzere gerçek ve tüzel kişilere hukuki danışmanlık ve dava takibi hizmeti vermektedir.</p>
-      <dl class="facts">
-        <div><dt>Adres</dt><dd>Reşatbey Mah. 62006 Sk. No:5, Seyhan / Adana</dd></div>
-        <div><dt>Telefon</dt><dd>+90 532 292 10 72</dd></div>
-        <div><dt>E-posta</dt><dd>info@gekhukuk.com</dd></div>
-      </dl>
+<section class="facts-band" aria-label="Büro hakkında kısa bilgiler">
+  <div class="wrap">
+    <dl class="facts">
+      <div><dt>Kuruluş</dt><dd>2014</dd></div>
+      <div><dt>Avukat</dt><dd>3</dd></div>
+      <div><dt>Çalışma alanı</dt><dd>11</dd></div>
+      <div><dt>Çalışma dilleri</dt><dd>TR · EN</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap about-grid">
+    <figure class="about-art"><img src="assets/terazi.svg" alt="" width="400" height="380"></figure>
+    <div class="prose">
+      <p class="eyebrow">Hakkımızda</p>
+      <h2>2014'ten bu yana Adana'da</h2>
+      <p>GEK Hukuk Bürosu, 2014 yılında Av. Tuğsan Güneş tarafından kurulmuştur. Büro, gerçek ve tüzel kişilere danışmanlık ve dava takibi hizmeti vermektedir. Çalışmalarımızı Avukatlık Kanunu ve Türkiye Barolar Birliği Meslek Kuralları çerçevesinde yürütürüz.</p>
+      <p>Büronun adı, avukatlarımızın soyadlarının baş harflerinden gelir: Güneş, Erdil, Karakaya.</p>
+      <p><a class="more" href="hakkimizda.html">Büro hakkında</a></p>
     </div>
   </div>
+</section>
 
-  <section id="hakkimizda">
-    <div class="wrap sec-head">
-      <h2>Hakkımızda</h2>
-      <div class="sec-body">
-        <p>GEK Hukuk Bürosu, 2014 yılında Av. Tuğsan Güneş tarafından Adana'da kurulmuştur. Büroda bugün Av. Tuğsan Güneş, Av. Ömer Murat Erdil ve Av. Adem Karakaya birlikte çalışmaktadır. Avukatlık Kanunu ve Türkiye Barolar Birliği Meslek Kuralları çerçevesinde, müvekkillerimize hukuki durumlarını açıkça anlatmayı ve süreç boyunca düzenli bilgi vermeyi esas alıyoruz.</p>
-        <p>Danışmanlık ve dava takibinde Türkçe ve İngilizce çalışıyoruz.</p>
-      </div>
+<section class="block">
+  <div class="wrap">
+    <div class="block-head">
+      <p class="eyebrow">Çalışma Alanları</p>
+      <h2>Danışmanlık ve dava takibi yaptığımız alanlar</h2>
     </div>
-  </section>
+    <ul class="area-grid">
+      <li><a class="area-card" href="sirketler-hukuku.html"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V5l8-3v19M12 8l8 3v10M2 21h20M7 8h2M7 12h2M7 16h2M15 13h2M15 17h2"/></svg><h3>Şirketler Hukuku</h3><p>Şirketlerin kuruluşundan tasfiyesine kadar geçen süreçte ortaya çıkan hukuki işlemler.</p></a></li>
+      <li><a class="area-card" href="ticaret-hukuku.html"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M8 7V4h8v3M3 12h18M11 12v2h2v-2"/></svg><h3>Ticaret Hukuku</h3><p>Tacirler arasındaki ilişkilerden ve ticari işlerden doğan sözleşme ve uyuşmazlıklar.</p></a></li>
+      <li><a class="area-card" href="sirket-danismanligi.html"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg><h3>Şirket Danışmanlığı</h3><p>Şirketlerin günlük işleyişinde ihtiyaç duyduğu sürekli hukuki destek.</p></a></li>
+      <li><a class="area-card" href="uyum-compliance.html"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><h3>Uyum (Compliance)</h3><p>Şirketlerin yürürlükteki mevzuata uygun çalışmasına yönelik değerlendirme ve düzenlemeler.</p></a></li>
+      <li><a class="area-card" href="gayrimenkul-hukuku.html"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></svg><h3>Gayrimenkul Hukuku</h3><p>Taşınmazların edinilmesi, kullanılması ve devrine ilişkin işlemler ile uyuşmazlıklar.</p></a></li>
+      <li><a class="area-card" href="is-hukuku.html"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6"/><circle cx="17" cy="8" r="2.5"/><path d="M16 14c3 0 5 2 5 5"/></svg><h3>İş Hukuku</h3><p>İşçi ile işveren arasındaki iş ilişkisinin kurulması, yürütülmesi ve sona ermesi.</p></a></li>
+      <li><a class="area-card" href="icra-iflas-hukuku.html"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h9l4 4v16H6z"/><path d="M14 2v5h5M9 12h7M9 16h7"/></svg><h3>İcra ve İflas Hukuku</h3><p>Alacakların takibi ve tahsili ile borçlunun mal varlığına yönelik süreçler.</p></a></li>
+      <li><a class="area-card" href="bosanma-aile-hukuku.html"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="13" r="5.5"/><circle cx="15" cy="13" r="5.5"/><path d="M10 4l2-2 2 2"/></svg><h3>Boşanma ve Aile Hukuku</h3><p>Evlilik birliği ve aile ilişkilerinden doğan hukuki süreçler.</p></a></li>
+      <li><a class="area-card" href="miras-hukuku.html"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22V11M12 15l-4-3M12 13l4-3"/><path d="M12 11a5 5 0 1 0-5-5 4 4 0 0 0 0 .5A4 4 0 1 0 12 11a4 4 0 1 0 5-4.5V6a5 5 0 0 0-5 5z"/></svg><h3>Miras Hukuku</h3><p>Ölüme bağlı tasarruflar ve mirasın paylaşımına ilişkin işlemler ile davalar.</p></a></li>
+      <li><a class="area-card" href="fikri-mulkiyet-hukuku.html"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg><h3>Fikri Mülkiyet Hukuku</h3><p>Marka, patent, tasarım ve eser sahipliğinden doğan hakların korunması.</p></a></li>
+      <li><a class="area-card" href="arabuluculuk-uzlastirma.html"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h6M16 12h6M5 9l3 3-3 3M19 9l-3 3 3 3"/><circle cx="12" cy="12" r="2.5"/><path d="M12 3v4M12 17v4"/></svg><h3>Arabuluculuk ve Uzlaştırmada Temsil</h3><p>Arabuluculuk ve uzlaştırma süreçlerinde tarafların avukat olarak temsil edilmesi.</p></a></li>
+    </ul>
+  </div>
+</section>
 
-  <section id="calisma-alanlari">
-    <div class="wrap sec-head">
-      <h2>Çalışma Alanları</h2>
-      <div class="sec-body">
-        <ul class="areas">
-          <li><h3>Şirketler Hukuku</h3><p>Şirket kuruluşu, esas sözleşme değişiklikleri, genel kurul işlemleri, pay devirleri.</p></li>
-          <li><h3>Ticaret Hukuku</h3><p>Ticari sözleşmeler, kambiyo senetleri, ticari alacak uyuşmazlıkları.</p></li>
-          <li><h3>Şirket Danışmanlığı</h3><p>Şirketlere sürekli hukuki danışmanlık, sözleşme ve iç düzenleme incelemeleri.</p></li>
-          <li><h3>Uyum (Compliance)</h3><p>KVKK uyumu, şirket içi politika ve prosedürler, mevzuata uyum değerlendirmeleri.</p></li>
-          <li><h3>Gayrimenkul Hukuku</h3><p>Tapu işlemleri, kira uyuşmazlıkları, kat karşılığı inşaat sözleşmeleri.</p></li>
-          <li><h3>İş Hukuku</h3><p>İş sözleşmeleri, fesih süreçleri, işçilik alacakları, arabuluculuk.</p></li>
-          <li><h3>İcra ve İflas Hukuku</h3><p>Alacak takibi, itirazın iptali, haciz ve iflas süreçleri.</p></li>
-          <li><h3>Boşanma ve Aile Hukuku</h3><p>Boşanma, velayet, nafaka ve mal rejiminin tasfiyesi.</p></li>
-          <li><h3>Miras Hukuku</h3><p>Mirasçılık belgesi, vasiyetname, tenkis ve miras paylaşımı davaları.</p></li>
-          <li><h3>Fikri Mülkiyet Hukuku</h3><p>Marka ve patent başvuruları, telif hakları, tecavüz ve tescil uyuşmazlıkları.</p></li>
-        </ul>
-      </div>
+<section class="block steps-block">
+  <div class="wrap">
+    <div class="block-head">
+      <p class="eyebrow">Çalışma şeklimiz</p>
+      <h2>Bir dosya bizde nasıl ilerler</h2>
     </div>
-  </section>
+    <ol class="steps">
+      <li><span class="step-no">01</span><h3>İlk görüşme</h3><p>Konunuzu dinler, belge ve bilgileri birlikte gözden geçiririz.</p></li>
+      <li><span class="step-no">02</span><h3>Değerlendirme</h3><p>Hukuki durumu, izlenebilecek yolları ve olası sonuçlarını açıkça anlatırız.</p></li>
+      <li><span class="step-no">03</span><h3>Yol haritası</h3><p>Süreç, süreler ve gerekli işlemler konusunda yazılı bir plan oluştururuz.</p></li>
+      <li><span class="step-no">04</span><h3>Takip</h3><p>Dosyanın her aşamasında sizi düzenli olarak bilgilendiririz.</p></li>
+    </ol>
+  </div>
+</section>
 
-  <section id="avukatlar">
-    <div class="wrap sec-head">
-      <h2>Avukatlar</h2>
-      <div class="sec-body people">
-        <article class="person">
-          <div class="mono" aria-hidden="true">G</div>
-          <h3>Av. Tuğsan Güneş</h3>
-          <dl>
-            <dt>Baro</dt><dd>Adana Barosu</dd>
-            <dt>Sicil No</dt><dd>3428</dd>
-            <dt>Telefon</dt><dd>+90 532 292 10 72</dd>
-            <dt>Eğitim</dt><dd>Yeditepe Üniversitesi Hukuk Fakültesi</dd>
-            <dt>Diller</dt><dd>Türkçe, İngilizce</dd>
-          </dl>
-        </article>
-        <article class="person">
-          <div class="mono" aria-hidden="true">E</div>
-          <h3>Av. Ömer Murat Erdil</h3>
-          <dl>
-            <dt>Baro</dt><dd>Adana Barosu</dd>
-            <dt>Sicil No</dt><dd>4995</dd>
-            <dt>Telefon</dt><dd>+90 530 965 15 96</dd>
-            <dt>Diller</dt><dd>Türkçe, İngilizce</dd>
-          </dl>
-        </article>
-        <article class="person">
-          <div class="mono" aria-hidden="true">K</div>
-          <h3>Av. Adem Karakaya</h3>
-          <dl>
-            <dt>Baro</dt><dd>Adana Barosu</dd>
-            <dt>Sicil No</dt><dd>5962</dd>
-            <dt>Telefon</dt><dd>+90 545 413 36 82</dd>
-            <dt>Eğitim</dt><dd>Dokuz Eylül Üniversitesi Hukuk Fakültesi</dd>
-            <dt>Diller</dt><dd>Türkçe, İngilizce</dd>
-          </dl>
-        </article>
-      </div>
+<section class="block">
+  <div class="wrap">
+    <div class="block-head">
+      <p class="eyebrow">Avukatlarımız</p>
+      <h2>Büroda çalışan avukatlar</h2>
     </div>
-  </section>
+    <ul class="person-grid">
+      <li><a class="person-card" href="avukatlar.html#tugsan-gunes"><span class="mono" aria-hidden="true">G</span><span class="person-card-body"><strong>Av. Tuğsan Güneş</strong><span>Avukat · Adana Barosu</span><span>Sicil No 3428 · Yeditepe Üniversitesi</span><span class="more">Profil</span></span></a></li>
+      <li><a class="person-card" href="avukatlar.html#omer-murat-erdil"><span class="mono" aria-hidden="true">E</span><span class="person-card-body"><strong>Av. Ömer Murat Erdil</strong><span>Avukat · Adana Barosu</span><span>Sicil No 4995</span><span class="more">Profil</span></span></a></li>
+      <li><a class="person-card" href="avukatlar.html#adem-karakaya"><span class="mono" aria-hidden="true">K</span><span class="person-card-body"><strong>Av. Adem Karakaya</strong><span>Avukat · Adana Barosu</span><span>Sicil No 5962 · Dokuz Eylül Üniversitesi</span><span class="more">Profil</span></span></a></li>
+    </ul>
+  </div>
+</section>
 
-  <section id="yayinlar">
-    <div class="wrap sec-head">
-      <h2>Yayınlar</h2>
-      <div class="sec-body">
-        <p class="pubs-soon">Mevzuat değişiklikleri ve güncel içtihatlar üzerine yazılarımız yakında bu bölümde yayımlanacak.</p>
+<section class="block">
+  <div class="wrap">
+    <div class="block-head block-head-row">
+      <div>
+        <p class="eyebrow">Yayınlar</p>
+        <h2>Makaleler ve mevzuat notları</h2>
       </div>
+      <a class="more" href="yayinlar.html">Tüm yayınlar</a>
     </div>
-  </section>
+    <div class="empty-state">
+      <p>İlk yazılarımız hazırlanıyor. Mevzuat değişiklikleri ve güncel içtihatlar üzerine notlarımız yakında bu bölümde yayımlanacak.</p>
+    </div>
+  </div>
+</section>
 
-  <section id="iletisim">
-    <div class="wrap sec-head">
-      <h2>İletişim</h2>
-      <div class="sec-body contact">
-        <dl>
-          <div><dt>Adres</dt><dd>Reşatbey Mah. 62006 Sk. No:5<br>Arun Apt. Kat:5 Daire:14<br>Seyhan / Adana</dd></div>
-          <div><dt>Telefon</dt><dd>+90 532 292 10 72</dd></div>
-          <div><dt>E-posta</dt><dd>info@gekhukuk.com</dd></div>
-          <div><dt>Çalışma saatleri</dt><dd>Hafta içi 09.00 – 17.00</dd></div>
-        </dl>
-        <form id="contact-form" novalidate>
-          <label for="f-name">Ad Soyad<input id="f-name" name="name" autocomplete="name" required></label>
-          <label for="f-mail">E-posta<input id="f-mail" name="email" type="email" autocomplete="email" required></label>
-          <label for="f-msg">Mesajınız<textarea id="f-msg" name="message" required></textarea></label>
-          <label class="check" for="f-kvkk"><input id="f-kvkk" type="checkbox" required> <span><a href="kvkk.html">KVKK Aydınlatma Metni</a>'ni okudum.</span></label>
-          <button type="submit">Gönder</button>
-          <p class="form-note" id="form-status" role="status">Gönder dediğinizde mesajınız e-posta uygulamanızda açılır.</p>
-        </form>
-      </div>
+<section class="contact-band">
+  <div class="wrap contact-band-grid">
+    <div>
+      <p class="eyebrow">İletişim</p>
+      <h2>Büromuz</h2>
+      <address>Reşatbey Mah. 62006 Sk. No:5<br>Arun Apt. Kat:5 Daire:14<br>Seyhan / Adana</address>
     </div>
-  </section>
+    <dl class="contact-list">
+      <div><dt>Telefon</dt><dd><a href="tel:+905322921072">+90 532 292 10 72</a></dd></div>
+    <div><dt>WhatsApp</dt><dd><a href="https://wa.me/905325569086" rel="noopener" target="_blank">WhatsApp ile yazın</a></dd></div>
+      <div><dt>E-posta</dt><dd><a href="mailto:info@gekhukuk.com">info@gekhukuk.com</a></dd></div>
+      <div><dt>Çalışma saatleri</dt><dd>Hafta içi 09.00 – 17.00</dd></div>
+    </dl>
+    <div class="contact-band-cta"><a class="btn" href="iletisim.html">Bize yazın</a></div>
+  </div>
+</section>
 </main>
 
-<footer>
-  <div class="wrap">
-    <div>© <span id="year">2026</span> <b>GEK Hukuk Bürosu</b> · Güneş, Erdil, Karakaya · Reşatbey Mah. 62006 Sk. No:5 Arun Apt. K:5 D:14 Seyhan / Adana</div>
-    <p class="legal">Bu internet sitesi, Avukatlık Kanunu ve Türkiye Barolar Birliği Meslek Kuralları ile Reklam Yasağı Yönetmeliği çerçevesinde yalnızca bilgilendirme amacıyla hazırlanmıştır. Sitedeki içerikler hukuki görüş veya tavsiye niteliği taşımaz.</p>
-    <div class="links"><a href="kvkk.html">KVKK Aydınlatma Metni</a><a href="cerez.html">Çerez Politikası</a></div>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <img src="assets/gek-logo-ters.svg" alt="GEK Hukuk Bürosu" width="363" height="77">
+      <p>Av. Tuğsan Güneş, Av. Ömer Murat Erdil ve Av. Adem Karakaya. 2014'ten bu yana Adana'da.</p>
+    </div>
+    <div>
+      <h2>İletişim</h2>
+      <address>Reşatbey Mah. 62006 Sk. No:5<br>Arun Apt. Kat:5 Daire:14<br>Seyhan / Adana</address>
+      <p><a href="tel:+905322921072">+90 532 292 10 72</a><br>WhatsApp: <a href="https://wa.me/905325569086" rel="noopener" target="_blank">+90 532 556 90 86</a><br><a href="mailto:info@gekhukuk.com">info@gekhukuk.com</a><br>Hafta içi 09.00 – 17.00</p>
+    </div>
+    <div>
+      <h2>Çalışma Alanları</h2>
+      <ul>
+          <li><a href="sirketler-hukuku.html">Şirketler Hukuku</a></li>
+          <li><a href="ticaret-hukuku.html">Ticaret Hukuku</a></li>
+          <li><a href="sirket-danismanligi.html">Şirket Danışmanlığı</a></li>
+          <li><a href="uyum-compliance.html">Uyum (Compliance)</a></li>
+          <li><a href="gayrimenkul-hukuku.html">Gayrimenkul Hukuku</a></li>
+          <li><a href="is-hukuku.html">İş Hukuku</a></li>
+          <li><a href="icra-iflas-hukuku.html">İcra ve İflas Hukuku</a></li>
+          <li><a href="bosanma-aile-hukuku.html">Boşanma ve Aile Hukuku</a></li>
+          <li><a href="miras-hukuku.html">Miras Hukuku</a></li>
+          <li><a href="fikri-mulkiyet-hukuku.html">Fikri Mülkiyet Hukuku</a></li>
+          <li><a href="arabuluculuk-uzlastirma.html">Arabuluculuk ve Uzlaştırmada Temsil</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Büro</h2>
+      <ul>
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="avukatlar.html">Avukatlarımız</a></li>
+          <li><a href="yayinlar.html">Yayınlar</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+          <li><a href="kvkk.html">KVKK Aydınlatma Metni</a></li>
+          <li><a href="cerez.html">Çerez Politikası</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-legal">
+    <p>Bu internet sitesi, Avukatlık Kanunu ve Türkiye Barolar Birliği Meslek Kuralları ile Reklam Yasağı Yönetmeliği çerçevesinde yalnızca bilgilendirme amacıyla hazırlanmıştır. Sitedeki içerikler hukuki görüş veya tavsiye niteliği taşımaz.</p>
+    <p>© <span id="year">2026</span> GEK Hukuk Bürosu</p>
   </div>
 </footer>
-
-<script>
-document.getElementById('contact-form').addEventListener('submit', function (e) {
-  e.preventDefault();
-  var f = this;
-  var status = document.getElementById('form-status');
-  if (!this.checkValidity()) {
-    status.textContent = 'Lütfen tüm alanları doldurun ve KVKK onay kutusunu işaretleyin.';
-    return;
-  }
-  var subject = 'İletişim talebi: ' + f.elements['name'].value;
-  var bodyText = f.elements['message'].value + '\n\n' + f.elements['name'].value + ' <' + f.elements['email'].value + '>';
-  window.location.href = 'mailto:info@gekhukuk.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(bodyText);
-  status.textContent = 'E-posta uygulamanız açılmadıysa info@gekhukuk.com adresine yazabilirsiniz.';
-});
-document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+<div class="float-actions">
+  <a class="wa-float" href="https://wa.me/905325569086" rel="noopener" target="_blank" aria-label="WhatsApp ile yazın"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 .9c-1-.5-2.3-1.8-2.8-2.8l.9-1-1-2z"/></svg></a>
+</div>
+<script src="site.js"></script>
 </body>
 </html>

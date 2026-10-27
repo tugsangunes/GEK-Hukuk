@@ -1,0 +1,68 @@
+<!-- title: İletişim -->
+<!-- description: GEK Hukuk Bürosu adres, telefon, e-posta ve çalışma saatleri. -->
+<div class="page-head"><div class="wrap"><p class="eyebrow">İletişim</p><h1>Bize ulaşın</h1></div></div>
+<div class="wrap contact page-body">
+  <dl class="contact-list">
+    <div><dt>Adres</dt><dd>{{ADDRESS}}<br><a href="{{MAP}}" rel="noopener" target="_blank">Haritada göster</a></dd></div>
+    <div><dt>Telefon</dt><dd>{{PHONE}}</dd></div>
+    <div><dt>WhatsApp</dt><dd>{{WHATSAPP}}</dd></div>
+    <div><dt>E-posta</dt><dd>{{EMAIL}}</dd></div>
+    <div><dt>Çalışma saatleri</dt><dd>{{HOURS}}</dd></div>
+  </dl>
+  <form id="contact-form" novalidate>
+    <label for="f-name">Ad Soyad<input id="f-name" name="name" autocomplete="name" required></label>
+    <label for="f-mail">E-posta<input id="f-mail" name="email" type="email" autocomplete="email" required></label>
+    <label for="f-msg">Mesajınız<textarea id="f-msg" name="message" required></textarea></label>
+    <p class="form-note">Lütfen bu formla hukuki uyuşmazlığınızın ayrıntılarını veya özel nitelikli kişisel verilerinizi paylaşmayın.</p>
+    <label class="check" for="f-kvkk"><input id="f-kvkk" type="checkbox" required> <span><a href="kvkk.html">KVKK Aydınlatma Metni</a>'ni okudum.</span></label>
+    <button class="btn" type="submit">Gönder</button>
+    <p class="form-note" id="form-status" role="status">Gönder dediğinizde mesajınız e-posta uygulamanızda açılır.</p>
+  </form>
+</div>
+
+<section class="map-block" aria-label="Harita">
+  <div class="wrap">
+    <div class="map" id="harita" data-src="{{MAP_EMBED}}">
+      <div class="map-placeholder">
+        <svg class="map-pin" viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <p class="map-address">{{ADDRESS}}</p>
+        <div class="actions">
+          <button class="btn" type="button" id="map-load">Haritayı göster</button>
+          <a class="btn btn-ghost" href="{{MAP}}" rel="noopener" target="_blank">Google Haritalar'da aç</a>
+        </div>
+        <p class="form-note">Harita Google Haritalar'dan yüklenir. "Haritayı göster" dediğinizde Google, tarayıcınıza çerez yerleştirebilir. Ayrıntılar için <a href="cerez.html">Çerez Politikası</a>'na bakın.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block faq-block">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">Sık sorulan sorular</p>
+      <h2>Görüşme öncesi merak edilenler</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Görüşme için nasıl randevu alabilirim?</summary>
+        <p>Hafta içi 09.00 – 17.00 arasında büromuzu arayarak ya da bu sayfadaki formla bize yazarak randevu alabilirsiniz.</p>
+      </details>
+      <details>
+        <summary>İlk görüşmeye ne getirmeliyim?</summary>
+        <p>Konuyla ilgili sözleşme, tapu, tebligat, yazışma ve mahkeme ya da icra dairesinden gelen belgeleri getirmeniz, durumun daha hızlı değerlendirilmesini sağlar. Belgelerinizin yanında, olayların kısa bir tarih sırası da işe yarar.</p>
+      </details>
+      <details>
+        <summary>Paylaştığım bilgiler gizli kalır mı?</summary>
+        <p>Evet. Avukatlık Kanunu gereğince avukatlar, mesleki faaliyetleri sırasında öğrendikleri bilgileri saklamakla yükümlüdür. Kişisel verileriniz <a href="kvkk.html">KVKK Aydınlatma Metni</a>'nde anlatıldığı şekilde işlenir.</p>
+      </details>
+      <details>
+        <summary>Avukatlık ücreti nasıl belirlenir?</summary>
+        <p>Ücret, işin niteliği ve kapsamına göre müvekkille birlikte belirlenir ve yazılı bir sözleşmeye bağlanır. Ücret, Türkiye Barolar Birliği'nin yayımladığı Avukatlık Asgari Ücret Tarifesi'nin altında olamaz.</p>
+      </details>
+      <details>
+        <summary>Hangi dillerde çalışıyorsunuz?</summary>
+        <p>Görüşme, yazışma ve sözleşme çalışmalarını Türkçe ve İngilizce yürütüyoruz.</p>
+      </details>
+    </div>
+  </div>
+</section>
