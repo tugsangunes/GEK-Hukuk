@@ -66,8 +66,8 @@
     botToggle.hidden = false;
 
     var norm = function (t) {
-      return t.toLocaleLowerCase(lang).replace(/ı/g, 'i').replace(/ğ/g, 'g').replace(/ü/g, 'u')
-        .replace(/ş/g, 's').replace(/ö/g, 'o').replace(/ç/g, 'c').replace(/â/g, 'a');
+      // Küçük harf, ı → i ve aksanları at (ş → s, ü → u, é → e ...)
+      return t.toLocaleLowerCase(lang).replace(/ı/g, 'i').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     };
     var el = function (tag, cls, text) {
       var n = document.createElement(tag);

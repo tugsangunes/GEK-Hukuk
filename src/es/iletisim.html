@@ -1,0 +1,69 @@
+<!-- title: Contacto -->
+<!-- description: Dirección, teléfono, correo electrónico y horario del despacho de abogados GEK Hukuk en Adana (Turquía). -->
+<div class="page-head"><div class="wrap"><p class="eyebrow">Contacto</p><h1>Contacte con nosotros</h1></div></div>
+<div class="wrap contact page-body">
+  <dl class="contact-list">
+    <div><dt>Dirección</dt><dd>{{ADDRESS}}<br><a href="{{MAP}}" rel="noopener" target="_blank">Ver en el mapa</a></dd></div>
+    <div><dt>Teléfono</dt><dd>{{PHONE}}</dd></div>
+    <div><dt>WhatsApp</dt><dd>{{WHATSAPP}}</dd></div>
+    <div><dt>Correo electrónico</dt><dd>{{EMAIL}}</dd></div>
+    <div><dt>Horario</dt><dd>{{HOURS}}</dd></div>
+    <div><dt>Idiomas</dt><dd>Reuniones y correspondencia en turco o en inglés</dd></div>
+  </dl>
+  <form id="contact-form" novalidate>
+    <label for="f-name">Nombre y apellidos<input id="f-name" name="name" autocomplete="name" required></label>
+    <label for="f-mail">Correo electrónico<input id="f-mail" name="email" type="email" autocomplete="email" required></label>
+    <label for="f-msg">Su mensaje<textarea id="f-msg" name="message" required></textarea></label>
+    <p class="form-note">Por favor, no comparta a través de este formulario los detalles de su conflicto jurídico ni datos personales sensibles.</p>
+    <label class="check" for="f-kvkk"><input id="f-kvkk" type="checkbox" required> <span>He leído el <a href="kvkk.html">aviso de privacidad</a>.</span></label>
+    <button class="btn" type="submit">Enviar</button>
+    <p class="form-note" id="form-status" role="status">Al pulsar Enviar, su mensaje se abrirá en su programa de correo electrónico.</p>
+  </form>
+</div>
+
+<section class="map-block" aria-label="Mapa">
+  <div class="wrap">
+    <div class="map" id="harita" data-src="{{MAP_EMBED}}">
+      <div class="map-placeholder">
+        <svg class="map-pin" viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <p class="map-address">{{ADDRESS}}</p>
+        <div class="actions">
+          <button class="btn" type="button" id="map-load">Mostrar el mapa</button>
+          <a class="btn btn-ghost" href="{{MAP}}" rel="noopener" target="_blank">Abrir en Google Maps</a>
+        </div>
+        <p class="form-note">El mapa se carga desde Google Maps. Al pulsar «Mostrar el mapa», Google puede instalar cookies en su navegador. Consulte nuestra <a href="cerez.html">política de cookies</a> para más detalles.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block faq-block">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2>Antes de la primera reunión</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>¿Cómo puedo pedir una cita?</summary>
+        <p>Puede pedir una cita llamando al despacho de lunes a viernes entre las 09:00 y las 17:00 (hora de Turquía) o escribiéndonos mediante el formulario de esta página.</p>
+      </details>
+      <details>
+        <summary>¿Qué debo llevar a la primera reunión?</summary>
+        <p>Traer los contratos, escrituras, notificaciones, correspondencia y documentos de tribunales u oficinas de ejecución relacionados con su asunto permite valorar la situación con mayor rapidez. Además de sus documentos, resulta útil una breve cronología de los hechos.</p>
+      </details>
+      <details>
+        <summary>¿La información que comparto es confidencial?</summary>
+        <p>Sí. Según la Ley de la Abogacía de Turquía, los abogados están obligados a guardar secreto sobre la información que conocen en el ejercicio de su profesión. Sus datos personales se tratan tal como se describe en el <a href="kvkk.html">aviso de privacidad</a>.</p>
+      </details>
+      <details>
+        <summary>¿Cómo se determinan los honorarios?</summary>
+        <p>Los honorarios se acuerdan con el cliente según la naturaleza y el alcance del trabajo y se recogen en un contrato escrito. No pueden ser inferiores a la tarifa mínima de honorarios de abogados publicada por la Unión de Colegios de Abogados de Turquía.</p>
+      </details>
+      <details>
+        <summary>¿En qué idiomas trabajan?</summary>
+        <p>Llevamos a cabo las reuniones, la correspondencia y el trabajo contractual en turco y en inglés. Nuestro sitio web también está disponible en otros idiomas, solo con fines informativos.</p>
+      </details>
+    </div>
+  </div>
+</section>

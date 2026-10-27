@@ -1,0 +1,69 @@
+<!-- title: Contatti -->
+<!-- description: Indirizzo, telefono, e-mail e orari dello studio legale GEK Hukuk ad Adana (Turchia). -->
+<div class="page-head"><div class="wrap"><p class="eyebrow">Contatti</p><h1>Come contattarci</h1></div></div>
+<div class="wrap contact page-body">
+  <dl class="contact-list">
+    <div><dt>Indirizzo</dt><dd>{{ADDRESS}}<br><a href="{{MAP}}" rel="noopener" target="_blank">Vedi sulla mappa</a></dd></div>
+    <div><dt>Telefono</dt><dd>{{PHONE}}</dd></div>
+    <div><dt>WhatsApp</dt><dd>{{WHATSAPP}}</dd></div>
+    <div><dt>E-mail</dt><dd>{{EMAIL}}</dd></div>
+    <div><dt>Orari</dt><dd>{{HOURS}}</dd></div>
+    <div><dt>Lingue</dt><dd>Incontri e corrispondenza in turco o in inglese</dd></div>
+  </dl>
+  <form id="contact-form" novalidate>
+    <label for="f-name">Nome e cognome<input id="f-name" name="name" autocomplete="name" required></label>
+    <label for="f-mail">E-mail<input id="f-mail" name="email" type="email" autocomplete="email" required></label>
+    <label for="f-msg">Il suo messaggio<textarea id="f-msg" name="message" required></textarea></label>
+    <p class="form-note">La preghiamo di non indicare in questo modulo i dettagli della sua controversia né dati personali sensibili.</p>
+    <label class="check" for="f-kvkk"><input id="f-kvkk" type="checkbox" required> <span>Ho letto l'<a href="kvkk.html">informativa sulla privacy</a>.</span></label>
+    <button class="btn" type="submit">Invia</button>
+    <p class="form-note" id="form-status" role="status">Quando preme Invia, il messaggio si apre nel suo programma di posta elettronica.</p>
+  </form>
+</div>
+
+<section class="map-block" aria-label="Mappa">
+  <div class="wrap">
+    <div class="map" id="harita" data-src="{{MAP_EMBED}}">
+      <div class="map-placeholder">
+        <svg class="map-pin" viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <p class="map-address">{{ADDRESS}}</p>
+        <div class="actions">
+          <button class="btn" type="button" id="map-load">Mostra la mappa</button>
+          <a class="btn btn-ghost" href="{{MAP}}" rel="noopener" target="_blank">Apri in Google Maps</a>
+        </div>
+        <p class="form-note">La mappa viene caricata da Google Maps. Quando preme «Mostra la mappa», Google può installare cookie nel suo browser. Per i dettagli consulti la nostra <a href="cerez.html">cookie policy</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block faq-block">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">Domande frequenti</p>
+      <h2>Prima del primo incontro</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Come posso fissare un appuntamento?</summary>
+        <p>Può fissare un appuntamento chiamando lo studio dal lunedì al venerdì dalle 09:00 alle 17:00 (ora della Turchia) o scrivendoci tramite il modulo di questa pagina.</p>
+      </details>
+      <details>
+        <summary>Cosa devo portare al primo incontro?</summary>
+        <p>Portare contratti, atti di proprietà, notifiche, corrispondenza e documenti provenienti da tribunali o uffici esecutivi relativi alla sua questione consente di valutare più rapidamente la situazione. Oltre ai documenti, è utile una breve cronologia dei fatti.</p>
+      </details>
+      <details>
+        <summary>Le informazioni che condivido restano riservate?</summary>
+        <p>Sì. Ai sensi della legge turca sulla professione forense, gli avvocati sono tenuti a mantenere riservate le informazioni apprese nell'esercizio della professione. I suoi dati personali sono trattati come descritto nell'<a href="kvkk.html">informativa sulla privacy</a>.</p>
+      </details>
+      <details>
+        <summary>Come viene determinato l'onorario?</summary>
+        <p>L'onorario viene concordato con il cliente in base alla natura e all'entità dell'incarico e formalizzato in un accordo scritto. Non può essere inferiore alla tariffa minima forense pubblicata dall'Unione degli Ordini degli Avvocati di Turchia.</p>
+      </details>
+      <details>
+        <summary>In quali lingue lavorate?</summary>
+        <p>Incontri, corrispondenza e attività contrattuale si svolgono in turco e in inglese. Il nostro sito è disponibile anche in altre lingue, a scopo puramente informativo.</p>
+      </details>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,69 @@
+<!-- title: Contact -->
+<!-- description: Adresse, téléphone, e-mail et horaires du cabinet d'avocats GEK Hukuk à Adana (Turquie). -->
+<div class="page-head"><div class="wrap"><p class="eyebrow">Contact</p><h1>Nous contacter</h1></div></div>
+<div class="wrap contact page-body">
+  <dl class="contact-list">
+    <div><dt>Adresse</dt><dd>{{ADDRESS}}<br><a href="{{MAP}}" rel="noopener" target="_blank">Voir sur le plan</a></dd></div>
+    <div><dt>Téléphone</dt><dd>{{PHONE}}</dd></div>
+    <div><dt>WhatsApp</dt><dd>{{WHATSAPP}}</dd></div>
+    <div><dt>E-mail</dt><dd>{{EMAIL}}</dd></div>
+    <div><dt>Horaires</dt><dd>{{HOURS}}</dd></div>
+    <div><dt>Langues</dt><dd>Entretiens et correspondance en turc ou en anglais</dd></div>
+  </dl>
+  <form id="contact-form" novalidate>
+    <label for="f-name">Nom et prénom<input id="f-name" name="name" autocomplete="name" required></label>
+    <label for="f-mail">E-mail<input id="f-mail" name="email" type="email" autocomplete="email" required></label>
+    <label for="f-msg">Votre message<textarea id="f-msg" name="message" required></textarea></label>
+    <p class="form-note">Merci de ne pas communiquer par ce formulaire les détails de votre litige ni de données personnelles sensibles.</p>
+    <label class="check" for="f-kvkk"><input id="f-kvkk" type="checkbox" required> <span>J'ai lu la <a href="kvkk.html">note d'information sur les données personnelles</a>.</span></label>
+    <button class="btn" type="submit">Envoyer</button>
+    <p class="form-note" id="form-status" role="status">Lorsque vous cliquez sur Envoyer, votre message s'ouvre dans votre messagerie.</p>
+  </form>
+</div>
+
+<section class="map-block" aria-label="Plan">
+  <div class="wrap">
+    <div class="map" id="harita" data-src="{{MAP_EMBED}}">
+      <div class="map-placeholder">
+        <svg class="map-pin" viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <p class="map-address">{{ADDRESS}}</p>
+        <div class="actions">
+          <button class="btn" type="button" id="map-load">Afficher le plan</button>
+          <a class="btn btn-ghost" href="{{MAP}}" rel="noopener" target="_blank">Ouvrir dans Google Maps</a>
+        </div>
+        <p class="form-note">Le plan est chargé depuis Google Maps. Lorsque vous cliquez sur « Afficher le plan », Google peut déposer des cookies dans votre navigateur. Pour plus de détails, consultez notre <a href="cerez.html">politique relative aux cookies</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block faq-block">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">Questions fréquentes</p>
+      <h2>Avant le premier entretien</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Comment prendre rendez-vous ?</summary>
+        <p>Vous pouvez prendre rendez-vous en appelant le cabinet du lundi au vendredi entre 09h00 et 17h00 (heure de Turquie) ou en nous écrivant via le formulaire de cette page.</p>
+      </details>
+      <details>
+        <summary>Que dois-je apporter au premier entretien ?</summary>
+        <p>Apporter les contrats, titres de propriété, notifications, échanges de correspondance et documents émanant des tribunaux ou des offices d'exécution liés à votre affaire permet d'analyser la situation plus rapidement. En plus de vos documents, une courte chronologie des faits est utile.</p>
+      </details>
+      <details>
+        <summary>Les informations que je communique restent-elles confidentielles ?</summary>
+        <p>Oui. En vertu de la loi turque sur la profession d'avocat, les avocats sont tenus de garder secrètes les informations dont ils ont connaissance dans l'exercice de leur profession. Vos données personnelles sont traitées comme indiqué dans notre <a href="kvkk.html">note d'information</a>.</p>
+      </details>
+      <details>
+        <summary>Comment les honoraires sont-ils fixés ?</summary>
+        <p>Les honoraires sont convenus avec le client en fonction de la nature et de l'étendue de la mission et font l'objet d'une convention écrite. Ils ne peuvent être inférieurs au barème minimal des honoraires d'avocat publié par l'Union des barreaux de Turquie.</p>
+      </details>
+      <details>
+        <summary>Dans quelles langues travaillez-vous ?</summary>
+        <p>Nous menons les entretiens, la correspondance et le travail contractuel en turc et en anglais. Notre site est également disponible dans d'autres langues, à titre d'information uniquement.</p>
+      </details>
+    </div>
+  </div>
+</section>
