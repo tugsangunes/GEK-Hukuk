@@ -90,6 +90,7 @@ section { padding-block: 3.5rem; border-bottom: 1px solid var(--line); }
 .pubs time { color: var(--muted); font-size: .9rem; font-variant-numeric: tabular-nums; }
 .pubs h3 { font-size: 1.1rem; }
 .pubs p { margin: .25rem 0 0; color: var(--muted); font-size: .95rem; }
+.pubs-soon { color: var(--muted); margin: 0; }
 
 /* Contact */
 .contact { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 2.5rem; }
@@ -153,8 +154,8 @@ footer .links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
     <div class="wrap sec-head">
       <h2>Hakkımızda</h2>
       <div class="sec-body">
-        <p>GEK Hukuk Bürosu, Av. Tuğsan Güneş, Av. Ömer Murat Erdil ve Av. Adem Karakaya tarafından <span class="ph">20XX</span> yılında Adana'da kurulmuştur. Avukatlık Kanunu ve Türkiye Barolar Birliği Meslek Kuralları çerçevesinde, müvekkillerimize hukuki durumlarını açıkça anlatmayı ve süreç boyunca düzenli bilgi vermeyi esas alıyoruz.</p>
-        <p>Danışmanlık ve dava takibinde Türkçe ve <span class="ph">İngilizce</span> çalışıyoruz.</p>
+        <p>GEK Hukuk Bürosu, 2014 yılında Av. Tuğsan Güneş tarafından Adana'da kurulmuştur. Büro bugün Av. Tuğsan Güneş, Av. Ömer Murat Erdil ve Av. Adem Karakaya ortaklığıyla çalışmaktadır. Avukatlık Kanunu ve Türkiye Barolar Birliği Meslek Kuralları çerçevesinde, müvekkillerimize hukuki durumlarını açıkça anlatmayı ve süreç boyunca düzenli bilgi vermeyi esas alıyoruz.</p>
+        <p>Danışmanlık ve dava takibinde Türkçe ve İngilizce çalışıyoruz.</p>
       </div>
     </div>
   </section>
@@ -190,8 +191,8 @@ footer .links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
             <dt>Baro</dt><dd>Adana Barosu</dd>
             <dt>Sicil No</dt><dd>3428</dd>
             <dt>Telefon</dt><dd>+90 532 292 10 72</dd>
-            <dt>Eğitim</dt><dd><span class="ph">… Üniversitesi Hukuk Fakültesi</span></dd>
-            <dt>Diller</dt><dd><span class="ph">Türkçe, İngilizce</span></dd>
+            <dt>Eğitim</dt><dd>Yeditepe Üniversitesi Hukuk Fakültesi</dd>
+            <dt>Diller</dt><dd>Türkçe, İngilizce</dd>
           </dl>
         </article>
         <article class="person">
@@ -212,8 +213,8 @@ footer .links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
             <dt>Baro</dt><dd>Adana Barosu</dd>
             <dt>Sicil No</dt><dd>5962</dd>
             <dt>Telefon</dt><dd>+90 545 413 36 82</dd>
-            <dt>Eğitim</dt><dd><span class="ph">… Üniversitesi Hukuk Fakültesi</span></dd>
-            <dt>Diller</dt><dd><span class="ph">Türkçe, Almanca</span></dd>
+            <dt>Eğitim</dt><dd>Dokuz Eylül Üniversitesi Hukuk Fakültesi</dd>
+            <dt>Diller</dt><dd><span class="ph">Türkçe</span></dd>
           </dl>
         </article>
       </div>
@@ -224,11 +225,7 @@ footer .links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
     <div class="wrap sec-head">
       <h2>Yayınlar</h2>
       <div class="sec-body">
-        <p>Mevzuat değişiklikleri ve güncel içtihatlar üzerine bilgilendirme yazıları.</p>
-        <ul class="pubs">
-          <li><time datetime="2026-10">Ekim 2026</time><div><h3><span class="ph">Örnek makale başlığı</span></h3><p>Kısa özet: yazının konusu ve kimler için faydalı olduğu.</p></div></li>
-          <li><time datetime="2026-09">Eylül 2026</time><div><h3><span class="ph">Örnek makale başlığı</span></h3><p>Kısa özet: yazının konusu ve kimler için faydalı olduğu.</p></div></li>
-        </ul>
+        <p class="pubs-soon">Mevzuat değişiklikleri ve güncel içtihatlar üzerine yazılarımız yakında bu bölümde yayımlanacak.</p>
       </div>
     </div>
   </section>
@@ -247,7 +244,7 @@ footer .links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
           <label for="f-name">Ad Soyad<input id="f-name" name="name" autocomplete="name" required></label>
           <label for="f-mail">E-posta<input id="f-mail" name="email" type="email" autocomplete="email" required></label>
           <label for="f-msg">Mesajınız<textarea id="f-msg" name="message" required></textarea></label>
-          <label class="check" for="f-kvkk"><input id="f-kvkk" type="checkbox" required> <span><a href="kvkk.html">KVKK Aydınlatma Metni</a>'ni okudum; iletişim talebimin yanıtlanması amacıyla kişisel verilerimin işlenmesini kabul ediyorum.</span></label>
+          <label class="check" for="f-kvkk"><input id="f-kvkk" type="checkbox" required> <span><a href="kvkk.html">KVKK Aydınlatma Metni</a>'ni okudum.</span></label>
           <button type="submit">Gönder</button>
           <p class="form-note" id="form-status" role="status">Gönder dediğinizde mesajınız e-posta uygulamanızda açılır.</p>
         </form>
