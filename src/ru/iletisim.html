@@ -1,0 +1,69 @@
+<!-- title: Контакты -->
+<!-- description: Адрес, телефон, электронная почта и часы работы адвокатского бюро GEK Hukuk в Адане (Турция). -->
+<div class="page-head"><div class="wrap"><p class="eyebrow">Контакты</p><h1>Свяжитесь с нами</h1></div></div>
+<div class="wrap contact page-body">
+  <dl class="contact-list">
+    <div><dt>Адрес</dt><dd>{{ADDRESS}}<br><a href="{{MAP}}" rel="noopener" target="_blank">Показать на карте</a></dd></div>
+    <div><dt>Телефон</dt><dd>{{PHONE}}</dd></div>
+    <div><dt>WhatsApp</dt><dd>{{WHATSAPP}}</dd></div>
+    <div><dt>Эл. почта</dt><dd>{{EMAIL}}</dd></div>
+    <div><dt>Часы работы</dt><dd>{{HOURS}}</dd></div>
+    <div><dt>Языки</dt><dd>Встречи и переписка на турецком или английском языке</dd></div>
+  </dl>
+  <form id="contact-form" novalidate>
+    <label for="f-name">Имя и фамилия<input id="f-name" name="name" autocomplete="name" required></label>
+    <label for="f-mail">Эл. почта<input id="f-mail" name="email" type="email" autocomplete="email" required></label>
+    <label for="f-msg">Ваше сообщение<textarea id="f-msg" name="message" required></textarea></label>
+    <p class="form-note">Пожалуйста, не сообщайте через эту форму подробности вашего спора и особые категории персональных данных.</p>
+    <label class="check" for="f-kvkk"><input id="f-kvkk" type="checkbox" required> <span>Я ознакомился(-ась) с <a href="kvkk.html">уведомлением о персональных данных</a>.</span></label>
+    <button class="btn" type="submit">Отправить</button>
+    <p class="form-note" id="form-status" role="status">После нажатия «Отправить» сообщение откроется в вашей почтовой программе.</p>
+  </form>
+</div>
+
+<section class="map-block" aria-label="Карта">
+  <div class="wrap">
+    <div class="map" id="harita" data-src="{{MAP_EMBED}}">
+      <div class="map-placeholder">
+        <svg class="map-pin" viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <p class="map-address">{{ADDRESS}}</p>
+        <div class="actions">
+          <button class="btn" type="button" id="map-load">Показать карту</button>
+          <a class="btn btn-ghost" href="{{MAP}}" rel="noopener" target="_blank">Открыть в Google Maps</a>
+        </div>
+        <p class="form-note">Карта загружается из Google Maps. Когда вы нажмёте «Показать карту», Google может сохранить файлы cookie в вашем браузере. Подробнее — в нашей <a href="cerez.html">политике в отношении файлов cookie</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block faq-block">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">Частые вопросы</p>
+      <h2>Перед первой встречей</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Как записаться на встречу?</summary>
+        <p>Записаться на встречу можно, позвонив в бюро с понедельника по пятницу с 09:00 до 17:00 (время Турции) или написав нам через форму на этой странице.</p>
+      </details>
+      <details>
+        <summary>Что взять на первую встречу?</summary>
+        <p>Если вы принесёте договоры, документы на недвижимость, уведомления, переписку и документы из суда или службы исполнения, связанные с вашим вопросом, ситуацию можно будет оценить быстрее. Помимо документов, полезна краткая хронология событий.</p>
+      </details>
+      <details>
+        <summary>Останется ли переданная мной информация конфиденциальной?</summary>
+        <p>Да. По Закону Турции об адвокатуре адвокаты обязаны хранить в тайне сведения, ставшие им известными в ходе профессиональной деятельности. Ваши персональные данные обрабатываются, как описано в <a href="kvkk.html">уведомлении о персональных данных</a>.</p>
+      </details>
+      <details>
+        <summary>Как определяется гонорар адвоката?</summary>
+        <p>Гонорар согласовывается с клиентом с учётом характера и объёма работы и фиксируется в письменном договоре. Он не может быть ниже минимального тарифа адвокатских гонораров, утверждаемого Союзом коллегий адвокатов Турции.</p>
+      </details>
+      <details>
+        <summary>На каких языках вы работаете?</summary>
+        <p>Встречи, переписку и работу с договорами мы ведём на турецком и английском языках. Сайт доступен и на других языках, но только в информационных целях.</p>
+      </details>
+    </div>
+  </div>
+</section>

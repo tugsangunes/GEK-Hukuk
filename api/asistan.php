@@ -111,7 +111,7 @@ Kurallar:
 PROMPT;
 
 // Ziyaretçinin bulunduğu sayfanın dili; ziyaretçinin yazdığı dil anlaşılmazsa yanıt bu dilde verilir
-const LANG_NAMES = ['tr' => 'Türkçe', 'en' => 'English', 'de' => 'Deutsch', 'fr' => 'Français', 'it' => 'Italiano', 'es' => 'Español'];
+const LANG_NAMES = ['tr' => 'Türkçe', 'en' => 'English', 'de' => 'Deutsch', 'fr' => 'Français', 'it' => 'Italiano', 'es' => 'Español', 'ru' => 'Русский'];
 $lang = $in['lang'] ?? 'tr';
 if (!is_string($lang) || !isset(LANG_NAMES[$lang])) $lang = 'tr';
 $system .= "\n\nZiyaretçinin bulunduğu sayfanın dili: " . LANG_NAMES[$lang] . " ($lang).";
