@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 380" fill="none" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Adalet terazisi, çizim">
+<g stroke="#7f9bbd" stroke-width="1.2" opacity=".5"><path d="M20 96L200 30L380 96Z"/><path d="M20 104H380"/><path d="M40 110V320M66 110V320M36 110H70M36 320H70"/><path d="M110 110V320M136 110V320M106 110H140M106 320H140"/><path d="M264 110V320M290 110V320M260 110H294M260 320H294"/><path d="M334 110V320M360 110V320M330 110H364M330 320H364"/><path d="M10 330H390M0 342H400"/></g>
+<g stroke="#5fd6a0" stroke-width="2">
+<path d="M200 92V300"/><circle cx="200" cy="82" r="9"/>
+<path d="M170 300H230L246 322H154Z"/>
+<path d="M92 120L200 108L308 120"/>
+<path d="M92 120L58 220M92 120L126 220M308 120L274 220M308 120L342 220"/>
+<path d="M52 220H132Q92 256 52 220Z"/><path d="M268 220H348Q308 256 268 220Z"/>
+<circle cx="92" cy="120" r="4"/><circle cx="308" cy="120" r="4"/>
+</g></svg>
