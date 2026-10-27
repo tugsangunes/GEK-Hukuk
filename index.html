@@ -11,35 +11,24 @@
 <meta name="theme-color" content="#0f2340">
 <link rel="stylesheet" href="fonts.css">
 <style>
-/* Layout: narrow reading column, left-aligned sections separated by hairlines; brand navy + emerald from the logo */
+/* Layout: narrow reading column, left-aligned sections separated by hairlines; navy ground with light text and emerald accents (inverted logo) */
 :root {
-  --bg: #f5f8f7;
-  --surface: #ffffff;
-  --ink: #0f2340;
-  --muted: #4f5d70;
-  --line: #d6dfe0;
-  --accent: #1d7f53;
-  --brand-green: #2fae74;
-  --accent-soft: #e3f4ec;
-  --btn-bg: #0f2340;
-  --btn-fg: #ffffff;
-  --ph: #9a6b00;
-  --ph-bg: #fff6dd;
+  --bg: #0f2340;
+  --surface: #13294a;
+  --ink: #f1f6f3;
+  --muted: #b3c1d1;
+  --line: #24406a;
+  --accent: #5fd6a0;
+  --brand-green: #5fd6a0;
+  --accent-soft: #173d45;
+  --btn-bg: #5fd6a0;
+  --btn-fg: #0f2340;
+  --ph: #f0c45a;
+  --ph-bg: #2c2412;
   --font-display: "League Spartan", "Segoe UI", system-ui, sans-serif;
   --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
   --max: 68rem;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0b1a30; --surface: #10233f; --ink: #f1f6f3; --muted: #a9b8c8; --line: #233a5a;
-    --accent: #5fd6a0; --brand-green: #5fd6a0; --accent-soft: #163a3a; --btn-bg: #5fd6a0; --btn-fg: #0f2340;
-    --ph: #f0c45a; --ph-bg: #2c2412; color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #0b1a30; --surface: #10233f; --ink: #f1f6f3; --muted: #a9b8c8; --line: #233a5a;
-  --accent: #5fd6a0; --brand-green: #5fd6a0; --accent-soft: #163a3a; --btn-bg: #5fd6a0; --btn-fg: #0f2340;
-  --ph: #f0c45a; --ph-bg: #2c2412; color-scheme: dark;
+  color-scheme: dark;
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -132,7 +121,7 @@ footer .links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
 <body>
 <header>
   <div class="wrap">
-    <a class="brand" href="#top"><picture><source srcset="assets/gek-logo-ters.svg" media="(prefers-color-scheme: dark)"><img src="assets/gek-logo.svg" alt="GEK Hukuk Bürosu" width="363" height="77"></picture></a>
+    <a class="brand" href="#top"><img src="assets/gek-logo-ters.svg" alt="GEK Hukuk Bürosu" width="363" height="77"></a>
     <nav aria-label="Ana menü">
       <ul>
         <li><a href="#hakkimizda">Hakkımızda</a></li>
