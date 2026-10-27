@@ -302,3 +302,34 @@ form .btn { justify-self: start; }
 .map-pin { color: var(--accent); }
 .map-address { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; }
 @media (max-width: 760px) { .map { height: 30rem; } }
+
+/* WhatsApp ve asistan düğmeleri */
+.float-actions { position: fixed; right: max(16px, env(safe-area-inset-right, 0px)); bottom: max(16px, env(safe-area-inset-bottom, 0px)); z-index: 8; display: flex; align-items: center; gap: .6rem; }
+.wa-float, .bot-toggle { display: flex; align-items: center; gap: .5rem; border: 0; font: inherit; font-weight: 600; text-decoration: none; cursor: pointer; border-radius: 999px; box-shadow: 0 6px 20px rgba(0, 0, 0, .35); transition: transform .2s, background .2s; }
+.wa-float { padding: .8rem; background: var(--surface); color: var(--accent); border: 1px solid var(--line); }
+.bot-toggle { padding: .75rem 1.15rem .75rem .95rem; background: var(--btn-bg); color: var(--btn-fg); }
+.wa-float:hover, .bot-toggle:hover { transform: translateY(-2px); }
+.bot-toggle:hover { background: var(--accent-strong); }
+.wa-float svg, .bot-toggle svg { width: 1.4rem; height: 1.4rem; }
+.site-footer { padding-bottom: 4.5rem; }
+
+.bot { position: fixed; z-index: 9; right: max(16px, env(safe-area-inset-right, 0px)); bottom: calc(max(16px, env(safe-area-inset-bottom, 0px)) + 4.25rem); width: min(24rem, calc(100vw - 32px)); height: min(34rem, calc(100dvh - 7rem)); display: flex; flex-direction: column; background: var(--bg-deep); border: 1px solid var(--line); box-shadow: 0 16px 48px rgba(0, 0, 0, .5); }
+.bot[hidden] { display: none; }
+.bot-head { display: flex; align-items: center; justify-content: space-between; padding: .8rem 1rem; border-bottom: 1px solid var(--line); background: var(--surface); }
+.bot-head strong { font-family: var(--font-display); font-weight: 600; }
+.bot-close { background: none; border: 0; color: var(--muted); font-size: 1.6rem; line-height: 1; cursor: pointer; padding: 0 .25rem; }
+.bot-close:hover { color: var(--ink); }
+.bot-log { flex: 1; overflow-y: auto; padding: 1rem; display: flex; flex-direction: column; gap: .6rem; overscroll-behavior: contain; }
+.bot-msg { max-width: 88%; padding: .6rem .8rem; font-size: .95rem; line-height: 1.5; }
+.bot-msg.bot { background: var(--surface); border: 1px solid var(--line); align-self: flex-start; }
+.bot-msg.me { background: var(--accent-soft); color: var(--ink); align-self: flex-end; }
+.bot-choices, .bot-links { display: flex; flex-wrap: wrap; gap: .4rem; }
+.bot-choices button { font: inherit; font-size: .88rem; background: transparent; color: var(--accent); border: 1px solid var(--accent); padding: .35rem .7rem; cursor: pointer; text-align: left; }
+.bot-choices button:hover { background: var(--accent-soft); }
+.bot-links a { font-size: .88rem; font-weight: 600; background: var(--btn-bg); color: var(--btn-fg); padding: .35rem .75rem; text-decoration: none; }
+.bot-links a:hover { background: var(--accent-strong); }
+.bot-input { display: flex; gap: .4rem; padding: .6rem; border-top: 1px solid var(--line); background: var(--surface); }
+.bot-input input { flex: 1; min-width: 0; padding: .5rem .6rem; }
+.bot-input .btn { padding: .5rem .9rem; }
+@media (max-width: 560px) { .bot-toggle span { display: none; } .bot-toggle { padding: .85rem; } }
+.bot-log > * { flex-shrink: 0; }

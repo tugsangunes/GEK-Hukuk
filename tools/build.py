@@ -17,6 +17,8 @@ OFFICE = {
     "name": "GEK Hukuk Bürosu",
     "address_lines": ["Reşatbey Mah. 62006 Sk. No:5", "Arun Apt. Kat:5 Daire:14", "Seyhan / Adana"],
     "phone": "+90 532 292 10 72",
+    "whatsapp": "905325569086",
+    "whatsapp_label": "+90 532 556 90 86",
     "email": "info@gekhukuk.com",
     "hours": "Hafta içi 09.00 – 17.00",
     "map": "https://www.google.com/maps/search/?api=1&query=Re%C5%9Fatbey+Mah.+62006+Sk.+No%3A5+Seyhan+Adana",
@@ -168,6 +170,55 @@ def tel(number):
     return f'<a href="tel:{number.replace(" ", "")}">{number}</a>'
 
 
+WA_ICON = ('<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" '
+           'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/>'
+           '<path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 .9c-1-.5-2.3-1.8-2.8-2.8l.9-1-1-2z"/></svg>')
+
+
+# Sohbet asistanı (yapay zekâ bağlantısı kurulana kadar kapalı)
+ASSISTANT = False
+
+BOT_ICON = ('<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" '
+            'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/>'
+            '<path d="M8.5 10.5h.01M12 10.5h.01M15.5 10.5h.01"/></svg>')
+
+
+def assistant_data():
+    """Sohbet asistanının hazır yanıtlarda kullandığı büro bilgileri (site.js okur)."""
+    data = {
+        "phone": OFFICE["phone"], "tel": OFFICE["phone"].replace(" ", ""),
+        "whatsapp": OFFICE["whatsapp"], "email": OFFICE["email"], "hours": OFFICE["hours"],
+        "address": ", ".join(OFFICE["address_lines"]), "map": OFFICE["map"],
+        "areas": [{"name": n, "href": area_href(sl), "summary": sm, "keys": [t.lower() for t in tp]}
+                  for sl, n, sm, tp in AREAS],
+        "lawyers": [{"name": n, "href": f"avukatlar.html#{sl}"} for sl, _, n, _, _ in LAWYERS],
+    }
+    return json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
+
+
+def assistant_toggle():
+    if not ASSISTANT:
+        return ""
+    return f'''  <button class="bot-toggle" type="button" aria-expanded="false" aria-controls="asistan" hidden>{BOT_ICON}<span>Asistan</span></button>
+'''
+
+
+def assistant_panel():
+    if not ASSISTANT:
+        return ""
+    return f'''<section class="bot" id="asistan" aria-label="Site asistanı" hidden>
+  <header class="bot-head"><strong>GEK Hukuk Asistanı</strong><button class="bot-close" type="button" aria-label="Asistanı kapat">×</button></header>
+  <div class="bot-log" role="log" aria-live="polite"></div>
+  <form class="bot-input"><input type="text" name="q" placeholder="Sorunuzu yazın…" autocomplete="off" aria-label="Sorunuz"><button class="btn" type="submit">Sor</button></form>
+</section>
+<script id="asistan-veri" type="application/json">{assistant_data()}</script>
+'''
+
+
+def whatsapp(label=None):
+    return f'<a href="https://wa.me/{OFFICE["whatsapp"]}" rel="noopener" target="_blank">{label or OFFICE["whatsapp_label"]}</a>'
+
+
 def mail(addr):
     return f'<a href="mailto:{addr}">{addr}</a>'
 
@@ -248,7 +299,7 @@ def footer():
     <div>
       <h2>İletişim</h2>
       <address>{addr}</address>
-      <p>{tel(OFFICE['phone'])}<br>{mail(OFFICE['email'])}<br>{OFFICE['hours']}</p>
+      <p>{tel(OFFICE['phone'])}<br>WhatsApp: {whatsapp()}<br>{mail(OFFICE['email'])}<br>{OFFICE['hours']}</p>
     </div>
     <div>
       <h2>Çalışma Alanları</h2>
@@ -273,7 +324,10 @@ def footer():
     <p>© <span id="year">2026</span> {OFFICE['name']}</p>
   </div>
 </footer>
-<script src="site.js"></script>
+<div class="float-actions">
+  <a class="wa-float" href="https://wa.me/{OFFICE['whatsapp']}" rel="noopener" target="_blank" aria-label="WhatsApp ile yazın">{WA_ICON}</a>
+{assistant_toggle()}</div>
+{assistant_panel()}<script src="site.js"></script>
 </body>
 </html>
 """
@@ -322,7 +376,7 @@ def area_page(i):
     <div class="cta-box">
       <div>
         <h2>Bu konuda görüşmek için</h2>
-        <p>{tel(OFFICE['phone'])} · {mail(OFFICE['email'])}<br>{OFFICE['hours']}</p>
+        <p>{tel(OFFICE['phone'])} · {whatsapp("WhatsApp")} · {mail(OFFICE['email'])}<br>{OFFICE['hours']}</p>
       </div>
       <a class="btn" href="iletisim.html">Bize yazın</a>
     </div>
@@ -413,6 +467,7 @@ def render_template(text, articles=()):
   </article>""" for slug, ini, name, rows, note in LAWYERS),
         "ADDRESS": "<br>".join(OFFICE["address_lines"]),
         "PHONE": tel(OFFICE["phone"]),
+        "WHATSAPP": whatsapp("WhatsApp ile yazın"),
         "EMAIL": mail(OFFICE["email"]),
         "STEPS": "\n".join(f'      <li><span class="step-no">{i:02d}</span><h3>{t}</h3><p>{d}</p></li>'
                            for i, (t, d) in enumerate(STEPS, 1)),
