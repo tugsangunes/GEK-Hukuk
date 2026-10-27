@@ -1,0 +1,20 @@
+<!-- title: İletişim -->
+<!-- description: GEK Hukuk Bürosu adres, telefon, e-posta ve çalışma saatleri. -->
+<div class="page-head"><div class="wrap"><p class="eyebrow">İletişim</p><h1>Bize ulaşın</h1></div></div>
+<div class="wrap contact page-body">
+  <dl class="contact-list">
+    <div><dt>Adres</dt><dd>{{ADDRESS}}<br><a href="{{MAP}}" rel="noopener" target="_blank">Haritada göster</a></dd></div>
+    <div><dt>Telefon</dt><dd>{{PHONE}}</dd></div>
+    <div><dt>E-posta</dt><dd>{{EMAIL}}</dd></div>
+    <div><dt>Çalışma saatleri</dt><dd>{{HOURS}}</dd></div>
+  </dl>
+  <form id="contact-form" novalidate>
+    <label for="f-name">Ad Soyad<input id="f-name" name="name" autocomplete="name" required></label>
+    <label for="f-mail">E-posta<input id="f-mail" name="email" type="email" autocomplete="email" required></label>
+    <label for="f-msg">Mesajınız<textarea id="f-msg" name="message" required></textarea></label>
+    <p class="form-note">Lütfen bu formla hukuki uyuşmazlığınızın ayrıntılarını veya özel nitelikli kişisel verilerinizi paylaşmayın.</p>
+    <label class="check" for="f-kvkk"><input id="f-kvkk" type="checkbox" required> <span><a href="kvkk.html">KVKK Aydınlatma Metni</a>'ni okudum.</span></label>
+    <button class="btn" type="submit">Gönder</button>
+    <p class="form-note" id="form-status" role="status">Gönder dediğinizde mesajınız e-posta uygulamanızda açılır.</p>
+  </form>
+</div>
