@@ -62,9 +62,13 @@
       if (text) n.textContent = text;
       return n;
     };
-    var say = function (who, text, html) {
-      var m = el('div', 'bot-msg ' + who);
-      if (html) m.innerHTML = html; else m.textContent = text;
+    var say = function (who, text) {
+      var m = el('div', 'bot-msg ' + who.replace(/^bot\b/, 'from-bot').replace(/^me$/, 'from-me'));
+      // Yanıttaki sayfa adlarını (ör. is-hukuku.html) bağlantıya çevir
+      text.split(/([a-z0-9-]+\.html(?:#[a-z0-9-]+)?)/).forEach(function (part, i) {
+        if (i % 2) { var a = el('a', null, part); a.href = part; m.appendChild(a); }
+        else m.appendChild(document.createTextNode(part));
+      });
       log.appendChild(m);
       log.scrollTop = log.scrollHeight;
       return m;
@@ -168,6 +172,37 @@
       A.bilinmiyor();
     };
 
+    // Serbest sorular yapay zekâya gider; yanıt alınamazsa hazır yanıtlara dönülür
+    var history = [];
+    var busy = false;
+    var ask = function (q) {
+      if (busy) return;
+      busy = true;
+      var typing = say('bot typing', 'Yazıyor…');
+      var sent = history.concat([{ role: 'user', content: q }]).slice(-11);
+      if (sent[0].role !== 'user') sent = sent.slice(1);
+      fetch('api/asistan.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messages: sent })
+      }).then(function (r) {
+        return r.json().then(function (j) { if (!r.ok || !j.reply) throw new Error(j.error || r.status); return j.reply; });
+      }).then(function (reply) {
+        typing.remove();
+        history = sent.concat([{ role: 'assistant', content: reply }]);
+        say('bot', reply);
+        more();
+      }).catch(function (err) {
+        typing.remove();
+        if (String(err.message) === 'rate') {
+          say('bot', 'Kısa sürede çok sayıda soru geldi. Lütfen biraz sonra tekrar deneyin ya da bize doğrudan ulaşın:');
+          links(contact); more();
+        } else {
+          answer(q);
+        }
+      }).then(function () { busy = false; });
+    };
+
     function menu() {
       say('bot', 'Size nasıl yardımcı olabilirim?');
       choices([
@@ -182,16 +217,21 @@
 
     var setOpen = function (open) {
       bot.hidden = !open;
-      botToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.querySelectorAll('.bot-toggle, .bot-toggle-m').forEach(function (t) { t.setAttribute('aria-expanded', open ? 'true' : 'false'); });
       document.body.classList.toggle('bot-open', open);
       if (open && !started) {
         started = true;
-        say('bot', 'Merhaba, GEK Hukuk Bürosu\'na hoş geldiniz. Bu asistan büromuzla ilgili sık sorulan sorulara hazır yanıtlar verir; hukuki görüş veya tavsiye vermez.');
+        say('bot', 'Merhaba, GEK Hukuk Bürosu\'na hoş geldiniz. Büromuzla ilgili sorularınızı yanıtlayabilirim; hukuki görüş veya tavsiye veremem.');
+        var note = el('p', 'bot-note');
+        note.innerHTML = 'Yazdığınız sorular, yanıt üretilmesi için yapay zekâ hizmet sağlayıcımız Anthropic\'e (ABD) iletilir. Lütfen adınızı, iletişim bilgilerinizi ve uyuşmazlığınızın ayrıntılarını paylaşmayın. <a href="kvkk.html#yapay-zeka">Ayrıntılar</a>';
+        log.appendChild(note);
         menu();
       }
       if (open) bot.querySelector('input').focus({ preventScroll: true });
     };
     botToggle.addEventListener('click', function () { setOpen(bot.hidden); });
+    var botToggleM = document.querySelector('.bot-toggle-m');
+    if (botToggleM) botToggleM.addEventListener('click', function () { setOpen(bot.hidden); });
     bot.querySelector('.bot-close').addEventListener('click', function () { setOpen(false); botToggle.focus(); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !bot.hidden) setOpen(false); });
     bot.querySelector('.bot-input').addEventListener('submit', function (e) {
@@ -201,7 +241,7 @@
       inp.value = '';
       log.querySelectorAll('.bot-choices').forEach(function (c) { c.remove(); });
       say('me', q);
-      setTimeout(function () { answer(q); }, 300);
+      ask(q);
     });
   }
 
