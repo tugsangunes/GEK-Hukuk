@@ -78,6 +78,40 @@ LAWYERS = [
         ("Eğitim", "Dokuz Eylül Üniversitesi Hukuk Fakültesi"), ("Diller", "Türkçe, İngilizce")], ""),
 ]
 
+# Her alanın kendi sayfası: dosya adı ve sayfadaki giriş paragrafları
+AREA_PAGES = {
+    "sirketler": ("sirketler-hukuku.html", [
+        "Şirketler hukuku, ticaret şirketlerinin kuruluşu, yönetimi, ortaklık yapısındaki değişiklikler ve sona ermesiyle ilgili kuralları kapsar. Türk Ticaret Kanunu'nun öngördüğü şekil şartları ve tescil işlemleri, şirket hayatının her aşamasında dikkat gerektirir.",
+        "Anonim ve limited şirketlerin kuruluş ve esas sözleşme işlemlerinde, genel kurul ve yönetim kurulu kararlarının hazırlanmasında, pay devirlerinde ve ortaklar arasındaki uyuşmazlıklarda danışmanlık ve dava takibi hizmeti veriyoruz."]),
+    "ticaret": ("ticaret-hukuku.html", [
+        "Ticaret hukuku, tacirler arasındaki ilişkileri ve ticari işletmeyle ilgili işleri düzenler. Ticari sözleşmeler, kambiyo senetleri ve haksız rekabet bu alanın başlıca konularıdır.",
+        "Ticari sözleşmelerin hazırlanması ve incelenmesinde, alacakların takibinde ve ticari uyuşmazlıklarda, dava şartı olan arabuluculuk süreci de dahil olmak üzere danışmanlık ve dava takibi yapıyoruz."]),
+    "sirket-danismanligi": ("sirket-danismanligi.html", [
+        "Şirketlerin günlük işleyişinde sözleşmeler, çalışanlarla ilişkiler, tedarikçi ve müşterilerle yazışmalar gibi pek çok konu hukuki değerlendirme gerektirir. Bu konuların uyuşmazlığa dönüşmeden ele alınması, ileride doğabilecek riskleri azaltır.",
+        "Sürekli danışmanlık kapsamında şirketlerin sözleşme taslaklarını inceliyor, şirket içi düzenlemeleri hazırlıyor ve ticari kararlar öncesinde hukuki görüş veriyoruz."]),
+    "uyum": ("uyum-compliance.html", [
+        "Uyum (compliance), bir şirketin faaliyetlerinin yürürlükteki mevzuata ve kendi iç kurallarına uygun yürütülmesine yönelik çalışmaların bütünüdür. Kişisel verilerin korunması mevzuatı bu alanda en sık karşılaşılan konulardan biridir.",
+        "Şirketlerin KVKK kapsamındaki yükümlülüklerini değerlendiriyor; aydınlatma metinleri, veri envanteri ve şirket içi politika ve prosedürlerin hazırlanmasında destek veriyoruz."]),
+    "gayrimenkul": ("gayrimenkul-hukuku.html", [
+        "Gayrimenkul hukuku, taşınmazların mülkiyeti, kullanımı, kiralanması ve devriyle ilgili işlem ve uyuşmazlıkları kapsar. Taşınmaz satışlarında resmi şekil şartı ve tapu sicili kayıtları belirleyici öneme sahiptir.",
+        "Tapu iptali ve tescil, kira, tahliye ve kira tespiti, kat karşılığı inşaat sözleşmeleri ve ortaklığın giderilmesi konularında danışmanlık ve dava takibi yapıyoruz."]),
+    "is": ("is-hukuku.html", [
+        "İş hukuku, işçi ile işveren arasındaki ilişkinin kurulmasından sona ermesine kadar tarafların hak ve yükümlülüklerini düzenler. İşçilik alacakları ve işe iade taleplerinde dava açılmadan önce arabulucuya başvurulması zorunludur.",
+        "İşverenlere iş sözleşmeleri ve fesih süreçlerinde danışmanlık veriyor; işçilik alacakları, işe iade ve iş kazasından doğan uyuşmazlıklarda dava takibi yapıyoruz."]),
+    "icra-iflas": ("icra-iflas-hukuku.html", [
+        "İcra ve iflas hukuku, alacakların devlet eliyle zorla tahsilini ve borçlunun ödeme güçlüğüne düştüğü durumları düzenler. Takip yolunun doğru seçilmesi ve sürelere uyulması bu alanda özellikle önemlidir.",
+        "İlamlı ve ilamsız icra takipleri, itirazın iptali ve kaldırılması, menfi tespit ve istirdat davaları ile haciz ve satış işlemlerinde alacaklılara ve borçlulara hizmet veriyoruz."]),
+    "aile": ("bosanma-aile-hukuku.html", [
+        "Aile hukuku, evlilik birliğinin kurulması, sürmesi ve sona ermesiyle ortaya çıkan kişisel ve mali ilişkileri düzenler. Boşanma süreçlerinde velayet, nafaka ve mal rejiminin tasfiyesi çoğu zaman birlikte ele alınır.",
+        "Anlaşmalı ve çekişmeli boşanma davaları, velayet ve kişisel ilişki düzenlemeleri, nafaka talepleri ve mal rejiminin tasfiyesi konularında danışmanlık ve dava takibi yapıyoruz."]),
+    "miras": ("miras-hukuku.html", [
+        "Miras hukuku, bir kişinin ölümüyle malvarlığının mirasçılarına geçişini ve bu geçişle ilgili işlemleri düzenler. Vasiyetname ve miras sözleşmesi gibi ölüme bağlı tasarruflar, kanunun öngördüğü şekil şartlarına bağlıdır.",
+        "Mirasçılık belgesi alınması, vasiyetname düzenlenmesi, mirasın reddi, tenkis ve muris muvazaası davaları ile terekenin paylaşımında danışmanlık ve dava takibi yapıyoruz."]),
+    "fikri-mulkiyet": ("fikri-mulkiyet-hukuku.html", [
+        "Fikri mülkiyet hukuku; marka, patent, endüstriyel tasarım ve fikir ve sanat eserleri üzerindeki hakları korur. Marka ve tasarım hakları büyük ölçüde Türk Patent ve Marka Kurumu'na yapılan tescil ile korunur.",
+        "Marka ve tasarım başvuruları, itiraz süreçleri, tecavüz ve hükümsüzlük davaları, telif hakları ile lisans ve devir sözleşmelerinde danışmanlık ve dava takibi yapıyoruz."]),
+}
+
 # 24x24 çizgi ikonlar (stroke="currentColor"); alan kartlarında ve alan başlıklarında kullanılır
 ICONS = {
     "sirketler": '<path d="M4 21V5l8-3v19M12 8l8 3v10M2 21h20M7 8h2M7 12h2M7 16h2M15 13h2M15 17h2"/>',
@@ -114,6 +148,10 @@ e = html.escape
 def icon(slug, cls="icon"):
     return (f'<svg class="{cls}" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" '
             f'stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{ICONS[slug]}</svg>')
+
+
+def area_href(slug):
+    return AREA_PAGES[slug][0]
 
 
 def tel(number):
@@ -188,7 +226,7 @@ def header(current):
 
 def footer():
     addr = "<br>".join(OFFICE["address_lines"])
-    areas = "\n".join(f'          <li><a href="calisma-alanlari.html#{slug}">{name}</a></li>' for slug, name, *_ in AREAS)
+    areas = "\n".join(f'          <li><a href="{area_href(slug)}">{name}</a></li>' for slug, name, *_ in AREAS)
     return f"""</main>
 
 <footer class="site-footer">
@@ -231,29 +269,125 @@ def footer():
 """
 
 
-def area_cards(link_base="calisma-alanlari.html"):
+def area_cards():
     return "\n".join(
-        f'      <li><a class="area-card" href="{link_base}#{slug}">{icon(slug)}<h3>{name}</h3><p>{e(summary)}</p></a></li>'
+        f'      <li><a class="area-card" href="{area_href(slug)}">{icon(slug)}<h3>{name}</h3><p>{e(summary)}</p></a></li>'
         for slug, name, summary, _ in AREAS)
+
+
+def area_overview():
+    return "\n".join(
+        f"""      <li><a class="area-tile" href="{area_href(slug)}">
+        {icon(slug)}
+        <h2>{name}</h2>
+        <p>{e(summary)}</p>
+        <ul>{''.join(f'<li>{e(t)}</li>' for t in topics[:3])}</ul>
+        <span class="more">Ayrıntılar</span>
+      </a></li>""" for slug, name, summary, topics in AREAS)
+
+
+def crumbs(*parts):
+    links = "".join(f'<a href="{href}">{label}</a><span aria-hidden="true">/</span>' for href, label in parts[:-1])
+    return f'<nav class="crumbs" aria-label="Konum">{links}{e(parts[-1])}</nav>'
+
+
+def area_page(i):
+    slug, name, summary, topics = AREAS[i]
+    href, paras = AREA_PAGES[slug]
+    prev_slug, prev_name = AREAS[i - 1][:2]
+    next_slug, next_name = AREAS[(i + 1) % len(AREAS)][:2]
+    others = "\n".join(
+        f'        <li><a href="{area_href(s_)}"{" aria-current=\"page\"" if s_ == slug else ""}>{icon(s_)}{n_}</a></li>'
+        for s_, n_, *_ in AREAS)
+    body = f"""<div class="page-head"><div class="wrap">{crumbs(("index.html", "Ana Sayfa"), ("calisma-alanlari.html", "Çalışma Alanları"), name)}
+  <p class="eyebrow">Çalışma Alanı</p>
+  <div class="page-title-icon">{icon(slug)}<h1>{name}</h1></div>
+  <p class="lead">{e(summary)}</p>
+</div></div>
+<div class="wrap area-page page-body">
+  <article class="prose">
+    {''.join(f'<p>{e(p_)}</p>' for p_ in paras)}
+    <h2>Başlıca konular</h2>
+    <ul class="topic-list">{''.join(f'<li>{e(t)}</li>' for t in topics)}</ul>
+    <div class="cta-box">
+      <div>
+        <h2>Bu konuda görüşmek için</h2>
+        <p>{tel(OFFICE['phone'])} · {mail(OFFICE['email'])}<br>{OFFICE['hours']}</p>
+      </div>
+      <a class="btn" href="iletisim.html">Bize yazın</a>
+    </div>
+  </article>
+  <aside class="area-aside">
+    <h2>Çalışma alanları</h2>
+    <ul>
+{others}
+    </ul>
+  </aside>
+</div>
+<nav class="wrap pager" aria-label="Diğer alanlar">
+  <a href="{area_href(prev_slug)}"><span>Önceki alan</span>{prev_name}</a>
+  <a href="{area_href(next_slug)}"><span>Sonraki alan</span>{next_name}</a>
+</nav>
+"""
+    out = head(name, f"{OFFICE['name']}: {summary}")
+    return href, out + header("calisma-alanlari.html") + body + footer()
+
+
+def load_articles():
+    """src/yazilar/*.html dosyalarını tarihe göre yeniden eskiye sıralı döndürür (_ ile başlayanlar örnektir)."""
+    items = []
+    for f in sorted((SRC / "yazilar").glob("*.html")):
+        if f.name.startswith("_"):
+            continue
+        text = f.read_text(encoding="utf-8")
+        meta = dict(re.findall(r"<!-- (\w+): (.*?) -->", text))
+        meta["body"] = re.sub(r"<!-- \w+: .*? -->\n", "", text)
+        meta["href"] = f"yazi-{f.stem}.html"
+        items.append(meta)
+    return sorted(items, key=lambda m: m["date"], reverse=True)
+
+
+def tr_date(iso):
+    months = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"]
+    y, m, d = iso.split("-")
+    return f"{int(d)} {months[int(m) - 1]} {y}"
+
+
+def article_cards(articles):
+    if not articles:
+        return """<div class="empty-state">
+      <p>İlk yazılarımız hazırlanıyor. Mevzuat değişiklikleri ve güncel içtihatlar üzerine notlarımız yakında bu bölümde yayımlanacak.</p>
+    </div>"""
+    return '<ul class="article-list">' + "".join(
+        f"""<li><a class="article-card" href="{a['href']}"><span class="article-meta">{tr_date(a['date'])} · {e(a['author'])}</span><h3>{e(a['title'])}</h3><p>{e(a['summary'])}</p><span class="more">Devamını okuyun</span></a></li>"""
+        for a in articles) + "</ul>"
+
+
+def article_page(a):
+    body = f"""<div class="page-head"><div class="wrap">{crumbs(("index.html", "Ana Sayfa"), ("yayinlar.html", "Yayınlar"), a['title'])}
+  <p class="eyebrow">{tr_date(a['date'])} · {e(a['author'])}</p>
+  <h1>{e(a['title'])}</h1>
+</div></div>
+<article class="wrap prose page-body">
+{a['body']}
+  <p class="form-note">Bu yazı genel bilgilendirme amacı taşır, hukuki görüş veya tavsiye niteliğinde değildir.</p>
+</article>
+"""
+    return head(a["title"], a["summary"]) + header("yayinlar.html") + body + footer()
 
 
 def person_dl(rows):
     return "".join(f"<dt>{k}</dt><dd>{tel(v) if k == 'Telefon' else e(v)}</dd>" for k, v in rows)
 
 
-def render_template(text):
+def render_template(text, articles=()):
     replacements = {
+        "AREA_OVERVIEW": area_overview(),
+        "ARTICLES": article_cards(articles),
+        "ARTICLES_LATEST": article_cards(articles[:3]),
         "AREA_CARDS": area_cards(),
         "AREA_COUNT": str(len(AREAS)),
-        "AREA_INDEX": "\n".join(f'      <li><a href="#{slug}">{icon(slug)}{name}</a></li>' for slug, name, *_ in AREAS),
         "LAWYER_COUNT": str(len(LAWYERS)),
-        "AREA_SECTIONS": "\n".join(
-            f"""  <section class="area-detail" id="{slug}">
-    <div class="area-detail-head">{icon(slug)}<h2>{name}</h2></div>
-    <p>{e(summary)}</p>
-    <ul class="topic-list">{''.join(f'<li>{e(t)}</li>' for t in topics)}</ul>
-    <p class="area-detail-cta"><a class="more" href="iletisim.html">Bu konuda bize ulaşın</a></p>
-  </section>""" for slug, name, summary, topics in AREAS),
         "LAWYER_CARDS": "\n".join(
             f"""      <li><a class="person-card" href="avukatlar.html#{slug}"><span class="mono" aria-hidden="true">{ini}</span><span class="person-card-body"><strong>{name}</strong><span>Avukat · Adana Barosu</span><span>Sicil No {dict(rows)['Sicil No']}{' · ' + dict(rows)['Eğitim'].replace(' Hukuk Fakültesi', '') if 'Eğitim' in dict(rows) else ''}</span><span class="more">Profil</span></span></a></li>"""
             for slug, ini, name, rows, _ in LAWYERS),
@@ -279,6 +413,14 @@ def render_template(text):
 
 
 def build():
+    articles = load_articles()
+    for i in range(len(AREAS)):
+        name, page = area_page(i)
+        (ROOT / name).write_text(page, encoding="utf-8")
+        print("yazıldı:", name)
+    for a in articles:
+        (ROOT / a["href"]).write_text(article_page(a), encoding="utf-8")
+        print("yazıldı:", a["href"])
     for src in sorted(SRC.glob("*.html")):
         text = src.read_text(encoding="utf-8")
         meta = dict(re.findall(r"<!-- (\w+): (.*?) -->", text))
@@ -289,7 +431,7 @@ def build():
                             f'<a href="index.html">Ana Sayfa</a><span aria-hidden="true">/</span>{e(meta["title"])}</nav>', 1)
         extra = json_ld() if page == "index.html" else ""
         out = head(meta["title"], meta.get("description", f"{OFFICE['name']}, Adana."), meta.get("robots"), extra)
-        out += header(page) + render_template(body) + footer()
+        out += header(page) + render_template(body, articles) + footer()
         (ROOT / page).write_text(out, encoding="utf-8")
         print("yazıldı:", page)
 

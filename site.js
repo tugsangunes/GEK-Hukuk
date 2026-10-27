@@ -26,6 +26,18 @@
     });
   }
 
+  // Bölümleri ekrana girerken yumuşakça göster
+  var targets = document.querySelectorAll('.block .wrap, .facts-band .wrap, .area-tile, .contact-band .wrap');
+  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.add('reveal-on');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    targets.forEach(function (t) { t.classList.add('reveal'); io.observe(t); });
+  }
+
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 })();

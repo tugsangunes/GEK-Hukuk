@@ -7,7 +7,8 @@ Güneş, Erdil, Karakaya Hukuk Bürosu'nun (gekhukuk.com) statik web sitesi. Say
 | Yol | İçerik |
 | --- | --- |
 | `src/*.html` | Sayfaların kaynak metinleri (yalnızca sayfa gövdesi) |
-| `tools/build.py` | Büro bilgileri, çalışma alanları ve avukat bilgileri; üst menü ve alt bilgiyi ekleyip sayfaları üretir |
+| `src/yazilar/*.html` | Yayınlar bölümündeki makaleler; her biri `yazi-<dosya-adı>.html` olarak yayımlanır |
+| `tools/build.py` | Büro bilgileri, çalışma alanları (her alanın kendi sayfası dahil) ve avukat bilgileri; üst menü ve alt bilgiyi ekleyip sayfaları üretir |
 | `*.html` (kökte) | Üretilmiş sayfalar: ana sayfa, Hakkımızda, Çalışma Alanları, Avukatlarımız, Yayınlar, İletişim, KVKK, Çerez |
 | `style.css`, `site.js` | Ortak stil; mobil menü ve iletişim formu |
 | `fonts/`, `assets/` | Kendi sunucumuzdan sunulan yazı tipleri ve logo |
@@ -17,6 +18,8 @@ Kökteki HTML dosyalarını elle düzenlemeyin. `src/` altındaki metni ya da `t
 ```
 python3 tools/build.py
 ```
+
+Yeni makale eklemek için `src/yazilar/_ornek.html` dosyasını kopyalayıp başındaki `_` olmadan adlandırın, başlık, tarih, yazar ve özet satırlarını doldurun ve sayfaları yeniden üretin. Makaleler Yayınlar sayfasında ve ana sayfada en yeniden eskiye listelenir.
 
 Sarı işaretli (`class="ph"`) kutular yayından önce kontrol edilip silinmesi gereken notlardır.
 
