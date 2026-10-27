@@ -20,6 +20,7 @@ OFFICE = {
     "email": "info@gekhukuk.com",
     "hours": "Hafta içi 09.00 – 17.00",
     "map": "https://www.google.com/maps/search/?api=1&query=Re%C5%9Fatbey+Mah.+62006+Sk.+No%3A5+Seyhan+Adana",
+    "map_embed": "https://www.google.com/maps?q=Re%C5%9Fatbey+Mah.+62006+Sk.+No%3A5+Seyhan+Adana&z=16&output=embed",
 }
 
 AREAS = [
@@ -63,6 +64,11 @@ AREAS = [
      "Marka, patent, tasarım ve eser sahipliğinden doğan hakların korunması.",
      ["Marka ve tasarım başvuruları", "Marka hakkına tecavüz ve hükümsüzlük davaları", "Telif hakları",
       "Lisans ve devir sözleşmeleri"]),
+    ("arabuluculuk", "Arabuluculuk ve Uzlaştırmada Temsil",
+     "Arabuluculuk ve uzlaştırma süreçlerinde tarafların avukat olarak temsil edilmesi.",
+     ["Dava şartı arabuluculuk (iş, ticaret, tüketici ve kira uyuşmazlıkları)", "İhtiyari arabuluculuk",
+      "Anlaşma belgesinin hazırlanması ve icra edilebilirlik şerhi", "Ceza muhakemesinde uzlaştırma sürecinde temsil",
+      "Anlaşmadan doğan edimlerin takibi"]),
 ]
 
 LAWYERS = [
@@ -110,6 +116,9 @@ AREA_PAGES = {
     "fikri-mulkiyet": ("fikri-mulkiyet-hukuku.html", [
         "Fikri mülkiyet hukuku; marka, patent, endüstriyel tasarım ve fikir ve sanat eserleri üzerindeki hakları korur. Marka ve tasarım hakları büyük ölçüde Türk Patent ve Marka Kurumu'na yapılan tescil ile korunur.",
         "Marka ve tasarım başvuruları, itiraz süreçleri, tecavüz ve hükümsüzlük davaları, telif hakları ile lisans ve devir sözleşmelerinde danışmanlık ve dava takibi yapıyoruz."]),
+    "arabuluculuk": ("arabuluculuk-uzlastirma.html", [
+        "Arabuluculuk, tarafların uyuşmazlıklarını tarafsız bir arabulucunun yardımıyla, mahkemeye gitmeden ve kendi iradeleriyle çözmelerini sağlayan bir yöntemdir. İş, ticaret, tüketici ve kira uyuşmazlıkları gibi pek çok alanda dava açılmadan önce arabulucuya başvurulması zorunludur. Ceza muhakemesindeki uzlaştırma ise kanunda sayılan suçlarda şüpheli ile mağdurun bir uzlaştırmacı aracılığıyla anlaşmasına imkân verir.",
+        "Arabuluculuk ve uzlaştırma görüşmelerinde müvekkillerimizi temsil ediyor; taleplerin hazırlanmasında, görüşmelerin yürütülmesinde ve varılan anlaşmanın hukuka uygun biçimde belgelenmesinde destek veriyoruz."]),
 }
 
 # 24x24 çizgi ikonlar (stroke="currentColor"); alan kartlarında ve alan başlıklarında kullanılır
@@ -123,6 +132,7 @@ ICONS = {
     "icra-iflas": '<path d="M6 2h9l4 4v16H6z"/><path d="M14 2v5h5M9 12h7M9 16h7"/>',
     "aile": '<circle cx="9" cy="13" r="5.5"/><circle cx="15" cy="13" r="5.5"/><path d="M10 4l2-2 2 2"/>',
     "miras": '<path d="M12 22V11M12 15l-4-3M12 13l4-3"/><path d="M12 11a5 5 0 1 0-5-5 4 4 0 0 0 0 .5A4 4 0 1 0 12 11a4 4 0 1 0 5-4.5V6a5 5 0 0 0-5 5z"/>',
+    "arabuluculuk": '<path d="M2 12h6M16 12h6M5 9l3 3-3 3M19 9l-3 3 3 3"/><circle cx="12" cy="12" r="2.5"/><path d="M12 3v4M12 17v4"/>',
     "fikri-mulkiyet": '<path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/>',
 }
 
@@ -408,6 +418,7 @@ def render_template(text, articles=()):
                            for i, (t, d) in enumerate(STEPS, 1)),
         "HOURS": OFFICE["hours"],
         "MAP": OFFICE["map"],
+        "MAP_EMBED": OFFICE["map_embed"],
     }
     return re.sub(r"\{\{(\w+)\}\}", lambda m: replacements[m.group(1)], text)
 

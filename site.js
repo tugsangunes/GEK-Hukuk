@@ -26,6 +26,22 @@
     });
   }
 
+  // Harita yalnızca ziyaretçi isteyince Google'dan yüklenir
+  var mapBtn = document.getElementById('map-load');
+  if (mapBtn) {
+    mapBtn.addEventListener('click', function () {
+      var box = document.getElementById('harita');
+      var frame = document.createElement('iframe');
+      frame.src = box.getAttribute('data-src');
+      frame.title = 'GEK Hukuk Bürosu konumu';
+      frame.loading = 'lazy';
+      frame.referrerPolicy = 'no-referrer-when-downgrade';
+      box.innerHTML = '';
+      box.appendChild(frame);
+      box.classList.add('loaded');
+    });
+  }
+
   // Bölümleri ekrana girerken yumuşakça göster
   var targets = document.querySelectorAll('.block .wrap, .facts-band .wrap, .area-tile, .contact-band .wrap');
   if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {

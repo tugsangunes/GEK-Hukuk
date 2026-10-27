@@ -19,6 +19,22 @@
   </form>
 </div>
 
+<section class="map-block" aria-label="Harita">
+  <div class="wrap">
+    <div class="map" id="harita" data-src="{{MAP_EMBED}}">
+      <div class="map-placeholder">
+        <svg class="map-pin" viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <p class="map-address">{{ADDRESS}}</p>
+        <div class="actions">
+          <button class="btn" type="button" id="map-load">Haritayı göster</button>
+          <a class="btn btn-ghost" href="{{MAP}}" rel="noopener" target="_blank">Google Haritalar'da aç</a>
+        </div>
+        <p class="form-note">Harita Google Haritalar'dan yüklenir. "Haritayı göster" dediğinizde Google, tarayıcınıza çerez yerleştirebilir. Ayrıntılar için <a href="cerez.html">Çerez Politikası</a>'na bakın.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="block faq-block">
   <div class="wrap split">
     <div>

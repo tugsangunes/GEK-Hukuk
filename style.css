@@ -283,3 +283,22 @@ form .btn { justify-self: start; }
   .pager a:last-child { text-align: left; }
 }
 .contact .contact-list { align-content: start; gap: 1.5rem; }
+
+/* Harita */
+.map-block { padding-bottom: 4.5rem; }
+.map { position: relative; height: 26rem; border: 1px solid var(--line); overflow: hidden;
+  background-color: var(--bg-deep);
+  background-image:
+    linear-gradient(90deg, transparent 49.6%, rgba(127, 155, 189, .16) 49.6%, rgba(127, 155, 189, .16) 50.4%, transparent 50.4%),
+    linear-gradient(20deg, transparent 49.4%, rgba(127, 155, 189, .22) 49.4%, rgba(127, 155, 189, .22) 50.6%, transparent 50.6%),
+    linear-gradient(rgba(127, 155, 189, .08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(127, 155, 189, .08) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 46px 46px, 46px 46px; }
+.map iframe { display: block; width: 100%; height: 100%; border: 0; }
+.map.loaded { background: none; }
+.map-placeholder { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; text-align: center; gap: .75rem; padding: 1.5rem; }
+.map-placeholder .actions { justify-content: center; margin-top: .5rem; }
+.map-placeholder .form-note { max-width: 46ch; }
+.map-pin { color: var(--accent); }
+.map-address { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; }
+@media (max-width: 760px) { .map { height: 30rem; } }
